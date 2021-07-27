@@ -10,6 +10,7 @@ public class ChatEvent extends Event{
     private String changed;
     private String someText;
     private Chat chat; // just for interClinet usage
+    private byte[] image;
 
     public ChatEvent(String order) {
         this.order = order;
@@ -61,6 +62,14 @@ public class ChatEvent extends Event{
 
     public void setTheChat(Chat chat) {
         this.chat = chat;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 
     @Override

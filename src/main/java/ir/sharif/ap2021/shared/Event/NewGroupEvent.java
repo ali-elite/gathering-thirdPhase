@@ -4,10 +4,11 @@ import java.util.ArrayList;
 
 public class NewGroupEvent extends Event {
 
-    String order;
-    ArrayList<String> users;
-    String name;
-    String changed;
+    private String order;
+    private ArrayList<String> users;
+    private String name;
+    private String changed;
+    private byte[] image;
 
     public NewGroupEvent(String order, ArrayList<String> users, String name) {
         this.order = order;
@@ -46,6 +47,14 @@ public class NewGroupEvent extends Event {
 
     public void setChanged(String changed) {
         this.changed = changed;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 
     @Override

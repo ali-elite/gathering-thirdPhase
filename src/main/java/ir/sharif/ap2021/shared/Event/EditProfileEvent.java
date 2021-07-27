@@ -10,17 +10,16 @@ public class EditProfileEvent extends Event {
     private String phone;
     private String email;
     private String bio;
-    private String avatar;
+    private byte[] avatar;
     private LocalDate birthday;
 
-    public EditProfileEvent(String first, String last, String user, String phone, String email, String bio, String avatar, LocalDate birthday) {
+    public EditProfileEvent(String first, String last, String user, String phone, String email, String bio, LocalDate birthday) {
         this.first = first;
         this.last = last;
         this.user = user;
         this.phone = phone;
         this.email = email;
         this.bio = bio;
-        this.avatar = avatar;
         this.birthday = birthday;
     }
 
@@ -48,8 +47,12 @@ public class EditProfileEvent extends Event {
         return bio;
     }
 
-    public String getAvatar() {
+    public byte[] getAvatar() {
         return avatar;
+    }
+
+    public void setAvatar(byte[] avatar) {
+        this.avatar = avatar;
     }
 
     public LocalDate getBirthday() {

@@ -6,7 +6,8 @@ public class ThoughtEvent extends Event {
     private String order;
     private int thoughtId;
     private String mentionText;
-    private String mentionImg;
+    private byte[] mentionImg;
+
 
 
 
@@ -40,11 +41,11 @@ public class ThoughtEvent extends Event {
         this.mentionText = mentionText;
     }
 
-    public String getMentionImg() {
+    public byte[] getMentionImg() {
         return mentionImg;
     }
 
-    public void setMentionImg(String mentionImg) {
+    public void setMentionImg(byte[] mentionImg) {
         this.mentionImg = mentionImg;
     }
 
