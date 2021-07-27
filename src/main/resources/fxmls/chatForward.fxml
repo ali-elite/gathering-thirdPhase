@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseClicked="#forwardChat" prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: cyan;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="label" alignment="CENTER" layoutX="138.0" layoutY="12.0" prefHeight="75.0" prefWidth="514.0" text="Label">
+         <font>
+            <Font name="Ink Free" size="46.0" />
+         </font></Label>
+      <Ellipse fx:id="unseen" fill="#ff1f1f" layoutX="730.0" layoutY="43.0" radiusX="33.0" radiusY="32.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="unseenText" alignment="CENTER" layoutX="697.0" layoutY="16.0" prefHeight="54.0" prefWidth="66.0" text="Label" textFill="#0dc99a">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Circle fx:id="avatar" fill="DODGERBLUE" layoutX="59.0" layoutY="48.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" />
+   </children>
+</AnchorPane>

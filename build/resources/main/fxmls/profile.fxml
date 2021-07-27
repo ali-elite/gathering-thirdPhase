@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #B22222;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Circle fx:id="avatar" fill="DODGERBLUE" layoutX="95.0" layoutY="95.0" radius="81.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="followersLabel" alignment="CENTER" layoutX="117.0" layoutY="179.0" onMousePressed="#selectFollower" prefHeight="68.0" prefWidth="190.0" text="Followers" textFill="#f2eeee">
+         <font>
+            <Font name="Consolas Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="followingLabel" alignment="CENTER" layoutX="430.0" layoutY="179.0" onMousePressed="#selectFollowing" prefHeight="68.0" prefWidth="190.0" text="Followings" textFill="#f2eeee">
+         <font>
+            <Font name="Consolas Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="bioLabel" layoutX="14.0" layoutY="253.0" prefHeight="138.0" prefWidth="770.0" text="bio">
+         <font>
+            <Font name="Comic Sans MS" size="34.0" />
+         </font>
+      </Label>
+      <Label fx:id="statusLabel" alignment="CENTER" layoutX="554.0" layoutY="89.0" prefHeight="46.0" prefWidth="190.0" text="Followship Status">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="followerNumberLabel" alignment="CENTER" layoutX="307.0" layoutY="196.0" prefHeight="34.0" prefWidth="97.0" text="Label" textFill="#2b0606">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font></Label>
+      <Label fx:id="nicknameLabel" layoutX="196.0" layoutY="29.0" prefHeight="54.0" prefWidth="284.0" text="Nickname">
+         <font>
+            <Font name="Cooper Black" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="idLabel" layoutX="196.0" layoutY="95.0" prefHeight="34.0" prefWidth="277.0" text="\@ID">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastseenLabel" alignment="CENTER" layoutX="507.0" layoutY="33.0" prefHeight="46.0" prefWidth="242.0" text="LastSeen">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="followingNumberLabel" alignment="CENTER" layoutX="620.0" layoutY="196.0" prefHeight="34.0" prefWidth="69.0" text="Label" textFill="#2b0606">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font></Label>
+      <ToolBar layoutY="404.0" prefHeight="23.0" prefWidth="800.0" style="-fx-background-color: #800000;" />
+   </children>
+</AnchorPane>

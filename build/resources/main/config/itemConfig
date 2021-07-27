@@ -1,0 +1,8 @@
+anyOne=AnyOne
+noOne=NoOne
+justFollowers=JustFollowers
+deleteColor=#FF0000
+deleteStyle=-fx-background-color: red
+deleteText=This message is deleted
+ownColor=#00FF00
+ownStyle=-fx-background-color: lime

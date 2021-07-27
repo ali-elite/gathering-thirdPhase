@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="578.0" prefWidth="676.0" style="-fx-background-color: #32CD32;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.sharif.ap2021.client.View.Menu.EditProfile">
+   <children>
+      <TextField fx:id="firstNameTF" layoutX="162.0" layoutY="39.0" />
+      <TextField fx:id="lastNameTf" layoutX="162.0" layoutY="81.0" />
+      <TextField fx:id="userNameTF" layoutX="162.0" layoutY="127.0" />
+      <TextField fx:id="phoneTF" layoutX="162.0" layoutY="171.0" />
+      <TextField fx:id="emailTF" layoutX="162.0" layoutY="216.0" />
+      <Label fx:id="myLabel" alignment="CENTER" layoutY="507.0" prefHeight="64.0" prefWidth="676.0" text="You can change your data here!" textFill="#cf0b0b">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="83.0" layoutY="38.0" prefHeight="26.0" prefWidth="64.0" text="First name" />
+      <Label alignment="CENTER" layoutX="45.0" layoutY="170.0" prefHeight="26.0" prefWidth="112.0" text="Phone Number" />
+      <Label alignment="CENTER" layoutX="83.0" layoutY="126.0" prefHeight="26.0" prefWidth="64.0" text="Username" />
+      <Label alignment="CENTER" layoutX="83.0" layoutY="80.0" prefHeight="26.0" prefWidth="64.0" text="Last name" />
+      <Label alignment="CENTER" layoutY="5.0" prefHeight="18.0" prefWidth="90.0" text="Edit Profile" />
+      <Line endX="388.2000732421875" endY="0.1999969482421875" layoutX="271.0" layoutY="14.0" startX="-189.39999389648438" startY="0.20000267028808594" />
+      <Line endX="-172.5999755859375" endY="537.4000244140625" layoutX="197.0" layoutY="25.0" startX="-172.5999755859375" startY="-1.1444091796875E-5" />
+      <Button fx:id="subBtn" layoutX="264.0" layoutY="468.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="126.0" stylesheets="@../css/mainButtons.css" text="Submit">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Label alignment="CENTER" layoutX="83.0" layoutY="215.0" prefHeight="26.0" prefWidth="64.0" text="Email" />
+      <Circle fx:id="avatar" fill="DODGERBLUE" layoutX="487.0" layoutY="170.0" radius="96.0" stroke="BLACK" strokeType="INSIDE" />
+      <DatePicker fx:id="birthday" layoutX="161.0" layoutY="263.0" prefHeight="26.0" prefWidth="150.0" />
+      <Label alignment="CENTER" layoutX="83.0" layoutY="263.0" prefHeight="26.0" prefWidth="64.0" text="Birthday" />
+      <TextArea fx:id="bioText" layoutX="162.0" layoutY="313.0" prefHeight="131.0" prefWidth="498.0" />
+      <Label alignment="CENTER" layoutX="83.0" layoutY="357.0" prefHeight="26.0" prefWidth="64.0" text="Biography" />
+      <Button fx:id="chooseBtn" layoutX="391.0" layoutY="273.0" mnemonicParsing="false" onAction="#chooseFile" prefHeight="32.0" prefWidth="192.0" stylesheets="@../css/glassBtn.css" text="Choose Image" />
+      <Button fx:id="backBtn" layoutX="509.0" layoutY="25.0" mnemonicParsing="false" onAction="#back" stylesheets="@../css/mainButtons.css" text="Back" />
+   </children>
+</AnchorPane>

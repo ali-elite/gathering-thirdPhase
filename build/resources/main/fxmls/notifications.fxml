@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+
+<ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.sharif.ap2021.client.View.Menu.Notifications">
+   <content>
+      <ToolBar fx:id="bar" prefHeight="59.0" prefWidth="799.0" style="-fx-background-color: black;">
+        <items>
+          <Button fx:id="BackBtn" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="66.0" stylesheets="@../css/mainButtons.css" text="Back" />
+        </items>
+      </ToolBar>
+   </content>
+</ScrollPane>

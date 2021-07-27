@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: cyan;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.sharif.ap2021.client.View.Menu.Login">
+   <children>
+      <TextField fx:id="usernameTF" layoutX="167.0" layoutY="235.0" prefHeight="42.0" prefWidth="434.0" promptText="Enter Username" />
+      <PasswordField fx:id="passwordTF" layoutX="167.0" layoutY="296.0" prefHeight="42.0" prefWidth="434.0" promptText="Enter Password" />
+      <Label fx:id="myLabel" alignment="CENTER" layoutX="81.0" layoutY="454.0" prefHeight="49.0" prefWidth="600.0" text="Welcome!" textFill="#e10909">
+         <font>
+            <Font name="Gabriola" size="28.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="2.0" layoutY="-3.0" prefHeight="26.0" prefWidth="46.0" text="login" />
+      <Line endX="-97.99998474121094" endY="-289.6000061035156" layoutX="115.0" layoutY="311.0" startX="-98.0" startY="272.4000244140625" />
+      <Line endX="635.199951171875" endY="29.0000057220459" layoutX="156.0" layoutY="-16.0" startX="-108.79997253417969" startY="29.000003814697266" />
+      <ImageView fitHeight="122.0" fitWidth="592.0" layoutX="153.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/mainlogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="subBtn" layoutX="305.0" layoutY="373.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="133.0" stylesheets="@../css/mainButtons.css" text="Submit">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="signBtn" layoutX="635.0" layoutY="22.0" mnemonicParsing="false" onAction="#SignUp" prefHeight="26.0" prefWidth="59.0" stylesheets="@../css/mainButtons.css" text="SignUp">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

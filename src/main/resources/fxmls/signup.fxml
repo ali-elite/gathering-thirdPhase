@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.sharif.ap2021.client.View.Menu.Signup">
+   <children>
+      <TextField fx:id="firstNameTF" layoutX="115.0" layoutY="273.0" prefHeight="26.0" prefWidth="268.0" promptText="Firstname" />
+      <TextField fx:id="lastNameTf" layoutX="400.0" layoutY="273.0" prefHeight="26.0" prefWidth="268.0" promptText="Lastname" />
+      <TextField fx:id="userNameTF" layoutX="115.0" layoutY="314.0" prefHeight="26.0" prefWidth="268.0" promptText="Username" />
+      <TextField fx:id="passwordTF" layoutX="115.0" layoutY="358.0" prefHeight="26.0" prefWidth="553.0" promptText="Password" />
+      <TextField fx:id="emailTF" layoutX="400.0" layoutY="314.0" prefHeight="26.0" prefWidth="268.0" promptText="Email" />
+      <Label fx:id="myLabel" alignment="CENTER" layoutX="25.0" layoutY="509.0" prefHeight="64.0" prefWidth="726.0" text="Fill the form please!" textFill="#cf0b0b">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutY="5.0" prefHeight="18.0" prefWidth="50.0" text="Sign Up" />
+      <Line endX="564.0" endY="0.19999980926513672" layoutX="220.0" layoutY="14.0" startX="-169.5999755859375" startY="0.19999980926513672" />
+      <Line endX="-172.5999755859375" endY="554.2000122070312" layoutX="186.0" layoutY="25.0" startX="-172.5999755859375" startY="-1.1444091796875E-5" />
+      <ImageView fitHeight="126.0" fitWidth="533.0" layoutX="153.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/mainlogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="subBtn" layoutX="293.0" layoutY="448.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="126.0" stylesheets="@../css/mainButtons.css" text="Submit">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="repeatTF" layoutX="115.0" layoutY="400.0" prefHeight="26.0" prefWidth="554.0" promptText="Repeat password" />
+      <Button fx:id="loginBtn" layoutX="623.0" layoutY="25.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="64.0" stylesheets="@../css/mainButtons.css" text="Login">
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
