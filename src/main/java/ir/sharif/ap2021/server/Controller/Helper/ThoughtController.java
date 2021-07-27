@@ -126,6 +126,9 @@ public class ThoughtController {
 
 
             Thought opinion = new Thought("o", myUser, user, event.getMentionText(), LocalDateTime.now());
+            if(event.getMentionImg() != null)
+            opinion.setImage(event.getMentionImg());
+
             opinion.setParent(thought.getId());
 
             connector.save(opinion);
@@ -135,16 +138,6 @@ public class ThoughtController {
 
             thought.getOpinions().add(savedOpinion.getId());
 
-
-//            if (response.getMentionImg().equals("changed")) {
-//                opinion.setImage("/ThoughtImages/" + opinion.getId() + ".png");
-//
-//
-//                File old = new File(errorConfig.getMainConfig().getResourcesPath() + "/ThoughtImages/" + "31" + ".png");
-//                File notOld = new File(errorConfig.getMainConfig().getResourcesPath() + "/ThoughtImages/" + opinion.getId() + ".png");
-//
-//                old.renameTo(notOld);
-//            }
 
             //didnt add replies to main user but it can be
 

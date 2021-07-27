@@ -6,6 +6,7 @@ import ir.sharif.ap2021.server.Hibernate.DatabaseDisconnectException;
 import ir.sharif.ap2021.shared.Event.ChatEvent;
 import ir.sharif.ap2021.shared.Model.Chat;
 import ir.sharif.ap2021.shared.Model.Message;
+import ir.sharif.ap2021.shared.Model.User;
 import ir.sharif.ap2021.shared.Response.ChatResponse;
 import ir.sharif.ap2021.shared.Response.Response;
 
@@ -25,19 +26,14 @@ public class ChatController {
 
     public Response answer() throws DatabaseDisconnectException {
 
+        User theUser = connector.fetch(User.class,clientHandler.user.getId());
 
         if (event.getOrder().equals("send")) {
 
             Chat chat = connector.fetch(Chat.class, event.getChatId());
-            Message message = new Message(clientHandler.user, false, event.getPm());
-
-//            if (formEvent.getChanged().equals("changed")) {
-//                message.setImage("/MessageImages/" + message.getId() + ".png");
-//                File old = new File(fxmlConfig.getMainConfig().getResourcesPath()+"/MessageImages/" + "311" + ".png");
-//                File notOld = new File(fxmlConfig.getMainConfig().getResourcesPath()+"/MessageImages/" + message.getId() + ".png");
-//
-//                old.renameTo(notOld);
-//            }
+            Message message = new Message(theUser, false, event.getPm());
+            if(event.getImage() != null)
+            message.setImage(event.getImage());
             chat.getMessages().add(message);
 
 
@@ -54,13 +50,13 @@ public class ChatController {
 
             Chat theChat = connector.fetch(Chat.class, event.getChatId());
 
-            Message theMessage = new Message(clientHandler.user,
+            Message theMessage = new Message(theUser,
                     true, event.getSomeText());
-            connector.save(theMessage);
 
-//            if (ChatForwardView.getThought().getImage() != null) {
-//                theMessage.setImage(ChatForwardView.getThought().getImage());
-//            }
+            if(event.getImage() != null)
+            theMessage.setImage(event.getImage());
+
+            connector.save(theMessage);
 
             theChat.getMessages().add(theMessage);
 

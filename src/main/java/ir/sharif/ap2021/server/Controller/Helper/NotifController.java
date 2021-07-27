@@ -30,13 +30,15 @@ public class NotifController {
 
     public Response answer() throws DatabaseDisconnectException {
 
+        User myUser = connector.fetch(User.class,clientHandler.user.getId());
+
         if (notifEvent.getOrder().equals("load")) {
 
             NotifResponse response = new NotifResponse("load");
             List<Notification> notifications = connector.fetchAll(Notification.class);
 
             for (Notification n : notifications) {
-                if (n.getReceiver().equals(clientHandler.user)) {
+                if (n.getReceiver().equals(myUser)) {
                     response.getNotifications().add(n);
                 }
             }
@@ -48,7 +50,7 @@ public class NotifController {
         if (notifEvent.getOrder().equals("accept")) {
 
             Notification notification = connector.fetch(Notification.class,notifEvent.getNotificationId());
-            User user = clientHandler.user;
+            User user = connector.fetch(User.class,clientHandler.user.getId());
             User sender = notification.getSender();
 
             user.getFollowers().add(sender.getId());
@@ -81,7 +83,7 @@ public class NotifController {
         if (notifEvent.getOrder().equals("reject")) {
 
             Notification notification = connector.fetch(Notification.class,notifEvent.getNotificationId());
-            User user = clientHandler.user;
+            User user = connector.fetch(User.class,clientHandler.user.getId());
             User sender = notification.getSender();
 
             notification.setText(errorConfig.getYouRejected() + " " + sender.getUserName());
@@ -113,7 +115,7 @@ public class NotifController {
         if (notifEvent.getOrder().equals("remove")) {
 
             Notification notification = connector.fetch(Notification.class,notifEvent.getNotificationId());
-            User user = clientHandler.user;
+            User user = connector.fetch(User.class,clientHandler.user.getId());
             User sender = notification.getSender();
 
 

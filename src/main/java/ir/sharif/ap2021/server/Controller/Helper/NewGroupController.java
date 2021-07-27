@@ -33,7 +33,7 @@ public class NewGroupController {
         if (event.getOrder().equals("makeGroup")) {
 
             List<User> users = new ArrayList<>();
-            User myUser = clientHandler.user;
+            User myUser = connector.fetch(User.class,clientHandler.user.getId());
 
             for (String s : event.getUsers()) {
                 users.add(connector.fetchUserWithUsername(s).get(0));
@@ -68,7 +68,7 @@ public class NewGroupController {
         if (event.getOrder().equals("groupMessage")) {
 
             List<User> users = new ArrayList<>();
-            User myUser = clientHandler.user;
+            User myUser = connector.fetch(User.class,clientHandler.user.getId());
 
             for (String s : event.getUsers()) {
                 users.add(connector.fetchUserWithUsername(s).get(0));
@@ -77,14 +77,9 @@ public class NewGroupController {
             Chat gp = new Chat("This is a group message", true);
 
             Message message = new Message(myUser, false, event.getName());
-
-//            if (formEvent.getChanged().equals("changed")) {
-//                message.setImage("/MessageImages/" + message.getId() + ".png");
-//                File old = new File(mainConfig.getResourcesPath() + "/MessageImages/" + "311" + ".png");
-//                File notOld = new File(mainConfig.getResourcesPath() + "/MessageImages/" + message.getId() + ".png");
-//
-//                old.renameTo(notOld);
-//            }
+            if(event.getImage() != null){
+                message.setImage(event.getImage());
+            }
 
             connector.save(message);
 

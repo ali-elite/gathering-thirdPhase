@@ -38,7 +38,7 @@ public class EditProfileController {
         }
 
 
-        User user = clientHandler.user;
+        User user = connector.fetch(User.class,clientHandler.user.getId());
 
 
         user.setFirstName(event.getFirst());
@@ -62,10 +62,9 @@ public class EditProfileController {
         user.setBiography(event.getBio());
 //        logger.info("user " + user.getId() + " has changed his/her biography to " + event.getBio());
 
-//        if (event.getAvatar().equals("change")) {
-//            user.setAvatar("/Avatars/" + user.getId() + ".png");
-//            logger.info("user " + user.getId() + " has changed his/her avatar");
-//        }
+        if(event.getAvatar() != null){
+            user.setAvatar(event.getAvatar());
+        }
 
         connector.save(user);
         EditProfileResponse response = new EditProfileResponse(true, "Welcome");

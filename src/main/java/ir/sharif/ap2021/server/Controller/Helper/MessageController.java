@@ -27,7 +27,7 @@ public class MessageController {
         if (event.getOrder().equals("seen")) {
 
             Message message = event.getMessage();
-            User myUser = clientHandler.user;
+            User myUser = connector.fetch(User.class,clientHandler.user.getId());
 
             if (!message.getSeenUsers().contains(myUser)) {
                 message.getSeenUsers().add(myUser);

@@ -25,30 +25,22 @@ public class ShareThoughtController {
 
     public Response answer() throws DatabaseDisconnectException {
 
-        User user = clientHandler.user;
+        User user = connector.fetch(User.class, clientHandler.user.getId());
 
         Thought thought = new Thought("t", user, user, event.getText(), LocalDateTime.now());
+        if (event.getPicture() != null) {
+            thought.setImage(event.getPicture());
+        }
         connector.save(thought);
 
 
-        Thought savedThought  = null;
-        while (savedThought == null){
+        Thought savedThought = null;
+        while (savedThought == null) {
             savedThought = connector.fetchThought(thought);
         }
 
 
         user.getThoughts().add(savedThought.getId());
-
-
-//        if (formEvent.getChange().equals("changed")) {
-//            thought.setImage("/ThoughtImages/" + thought.getId() + ".png");
-//
-//
-//            File old = new File(mainConfig.getResourcesPath() + "/ThoughtImages/" + "733" + ".png");
-//            File notOld = new File(mainConfig.getResourcesPath() + "/ThoughtImages/" + thought.getId() + ".png");
-//
-//            old.renameTo(notOld);
-//        }
 
 
         connector.save(user);
