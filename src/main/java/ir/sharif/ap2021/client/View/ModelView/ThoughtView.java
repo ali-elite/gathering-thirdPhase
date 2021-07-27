@@ -27,6 +27,8 @@ import javafx.stage.FileChooser;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -63,7 +65,7 @@ public class ThoughtView implements Initializable {
     @FXML
     private AnchorPane replyPane;
 
-    private boolean isChanged;
+    private byte[] data;
     private final ArrayList<Pane> comments = new ArrayList<>();
 
     public ThoughtView() throws IOException {
@@ -131,47 +133,59 @@ public class ThoughtView implements Initializable {
         likes.setText(String.valueOf(thought.getLikes()));
         rets.setText(String.valueOf(thought.getRethought()));
         opinions.setText(String.valueOf(thought.getOpinions().size()));
+        if (thought.getType().equals("t")) {
+            statusLabel.setText(errorConfig.getShareTitle());
+        } else {
+            statusLabel.setText(errorConfig.getReplyTitle() + doedUser.getUserName());
+        }
 
-//        BufferedImage bufferedImage = null;
-//        try {
-//            bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + ownerUser.getAvatar()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        assert bufferedImage != null;
-//        Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-//
-//        avatar.setFill(new ImagePattern(image));
-//
-//        if (thought.getType().equals("t")) {
-//            statusLabel.setText(errorConfig.getShareTitle());
-//        } else {
-//            statusLabel.setText(errorConfig.getReplyTitle() + doedUser.getUserName());
-//        }
-//
-//        if (thought.getImage() != null) {
-//
-//            BufferedImage bi = null;
-//            try {
-//                bi = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + thought.getImage()));
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//
-//            assert bi != null;
-//            Image im = SwingFXUtils.toFXImage(bi, null);
-//
-//            tIMG.setImage(im);
-//
-//        }
+        if (ownerUser.getAvatar() == null) {
+
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + imageConfig.getUser()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            avatar.setFill(new ImagePattern(image));
+
+        } else {
+
+            ByteArrayInputStream bis = new ByteArrayInputStream(ownerUser.getAvatar());
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(bis);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            avatar.setFill(new ImagePattern(image));
+        }
+
+
+        if (thought.getImage() != null) {
+
+            ByteArrayInputStream bis = new ByteArrayInputStream(thought.getImage());
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(bis);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            tIMG.setImage(image);
+
+        }
 
 
         replyBtn.setVisible(false);
         replyText.setVisible(false);
         insertBtn.setVisible(false);
         oIMG.setVisible(false);
-
 
     }
 
@@ -299,13 +313,10 @@ public class ThoughtView implements Initializable {
 
         ThoughtEvent thoughtChangeEvent = new ThoughtEvent("mention", thought.getId());
         thoughtChangeEvent.setMentionText(replyText.getText());
-
-        if (isChanged) {
-            thoughtChangeEvent.setMentionImg("changed");
-            isChanged = false;
-        } else {
-            thoughtChangeEvent.setMentionImg("no");
+        if(data != null){
+            thoughtChangeEvent.setMentionImg(data);
         }
+
 
         if (replyText.getText().length() <= 300) {
             thoughtListener.listen(thoughtChangeEvent);
@@ -332,27 +343,17 @@ public class ThoughtView implements Initializable {
 
         if (file != null) {
 
+            BufferedImage bImage = ImageIO.read(file);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ImageIO.write(bImage, "png", bos);
+            data = bos.toByteArray();
+
             Image img = new Image(file.toURI().toString());
+            tIMG.setImage(img);
 
-            saveToFile(img, "31");
-            oIMG.setImage(img);
-
-            isChanged = true;
-        } else isChanged = false;
-
-    }
-
-
-    public void saveToFile(Image image, String name) throws IOException {
-
-        File fileOutput = new File(errorConfig.getMainConfig().getResourcesPath() + "/ThoughtImages/" + name + ".png");
-
-        if (fileOutput.exists()) {
-            fileOutput.delete();
         }
 
-        BufferedImage Bi = SwingFXUtils.fromFXImage(image, null);
-        ImageIO.write(Bi, "png", fileOutput);
     }
+
 
 }

@@ -26,6 +26,7 @@ import javafx.stage.FileChooser;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -41,7 +42,7 @@ public class ChatMenu implements Initializable {
     FxmlConfig fxmlConfig = new FxmlConfig();
 
     private static Chat chat;
-    private boolean isChanged;
+    private byte[] data;
 
     @FXML
     private ScrollPane screenScroll;
@@ -110,14 +111,10 @@ public class ChatMenu implements Initializable {
         ChatEvent chatEvent = new ChatEvent("send");
         chatEvent.setChatId(chat.getId());
         chatEvent.setPm(textField.getText());
-
-
-        if (isChanged) {
-            chatEvent.setChanged("changed");
-            isChanged = false;
-        } else {
-            chatEvent.setChanged("no");
+        if(data != null){
+            chatEvent.setImage(data);
         }
+
 
         if (textField.getText().length() <= 300) {
             chatListener.listen(chatEvent);
@@ -137,13 +134,14 @@ public class ChatMenu implements Initializable {
 
         if (file != null) {
 
+            BufferedImage bImage = ImageIO.read(file);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ImageIO.write(bImage, "png", bos);
+            data = bos.toByteArray();
+
             Image img = new Image(file.toURI().toString());
-
-            saveToFile(img, "311");
             chosenImg.setImage(img);
-
-            isChanged = true;
-        } else isChanged = false;
+        }
 
     }
 
@@ -152,18 +150,6 @@ public class ChatMenu implements Initializable {
         StaticController.getMyMainMenu().show();
     }
 
-
-    public void saveToFile(Image image, String name) throws IOException {
-
-        File fileOutput = new File(errorConfig.getMainConfig().getResourcesPath() + "/MessageImages/" + name + ".png");
-
-        if (fileOutput.exists()) {
-            fileOutput.delete();
-        }
-
-        BufferedImage Bi = SwingFXUtils.fromFXImage(image, null);
-        ImageIO.write(Bi, "png", fileOutput);
-    }
 
 
     public void afterSend() {

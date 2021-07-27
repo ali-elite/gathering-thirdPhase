@@ -19,6 +19,7 @@ import javafx.scene.shape.Circle;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -79,41 +80,75 @@ public class ChatForwardView implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-//        if (chat.isGroup()) {
-//            avatar.setFill(new ImagePattern(new Image(imageConfig.getGroup())));
-//            label.setText(chat.getName());
-//        } else {
-//
-//            BufferedImage bufferedImage = null;
-//
-//            if (user != null) {
-//                try {
-//                    bufferedImage = ImageIO.read(new File(imageConfig.getMainConfig().getResourcesPath() + user.getAvatar()));
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                assert bufferedImage != null;
-//                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-//
-//                avatar.setFill(new ImagePattern(image));
-//                label.setText(user.getUserName());
-//            } else {
-//
-//                try {
-//                    bufferedImage = ImageIO.read(new File(imageConfig.getMainConfig().getResourcesPath() + StaticController.getMyUser().getAvatar()));
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                assert bufferedImage != null;
-//                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-//
-//                avatar.setFill(new ImagePattern(image));
-//                label.setText("Saved Messages");
-//            }
-//
-//        }
+        if (chat.isGroup()) {
+            avatar.setFill(new ImagePattern(new Image(imageConfig.getGroup())));
+            label.setText(chat.getName());
+        } else {
+
+            if (user != null) {
+                label.setText(user.getUserName());
+
+
+                if (user.getAvatar() == null) {
+
+                    BufferedImage bufferedImage = null;
+                    try {
+                        bufferedImage = ImageIO.read(new File(imageConfig.getMainConfig().getResourcesPath() + imageConfig.getUser()));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    assert bufferedImage != null;
+                    Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+                    avatar.setFill(new ImagePattern(image));
+
+                } else {
+
+                    ByteArrayInputStream bis = new ByteArrayInputStream(user.getAvatar());
+                    BufferedImage bufferedImage = null;
+                    try {
+                        bufferedImage = ImageIO.read(bis);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    assert bufferedImage != null;
+                    Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+                    avatar.setFill(new ImagePattern(image));
+
+                }
+
+            } else {
+
+                label.setText("Saved Messages");
+                if (StaticController.getMyUser().getAvatar() == null) {
+
+                    BufferedImage bufferedImage = null;
+                    try {
+                        bufferedImage = ImageIO.read(new File(imageConfig.getMainConfig().getResourcesPath() + imageConfig.getUser()));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    assert bufferedImage != null;
+                    Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+                    avatar.setFill(new ImagePattern(image));
+
+                } else {
+
+                    ByteArrayInputStream bis = new ByteArrayInputStream(StaticController.getMyUser().getAvatar());
+                    BufferedImage bufferedImage = null;
+                    try {
+                        bufferedImage = ImageIO.read(bis);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    assert bufferedImage != null;
+                    Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+                    avatar.setFill(new ImagePattern(image));
+
+                }
+
+            }
+
+        }
 
         unseenText.setText(String.valueOf(unseen));
     }
@@ -127,7 +162,6 @@ public class ChatForwardView implements Initializable {
         chatListener.listen(chatEvent);
 
     }
-
 
 
 }

@@ -1,6 +1,7 @@
 package ir.sharif.ap2021.client.View.ModelView;
 
 import ir.sharif.ap2021.client.Config.ErrorConfig;
+import ir.sharif.ap2021.client.Config.ImageConfig;
 import ir.sharif.ap2021.client.Controller.StaticController;
 import ir.sharif.ap2021.client.Listener.UserSelectionListener;
 import ir.sharif.ap2021.shared.Event.UserSelectionEvent;
@@ -17,6 +18,7 @@ import javafx.scene.shape.Circle;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -25,6 +27,7 @@ import java.util.ResourceBundle;
 public class Profile implements Initializable {
 
     ErrorConfig errorConfig = new ErrorConfig();
+    ImageConfig imageConfig = new ImageConfig();
 
     private User user;
     private UserSelectionListener userSelectionListener = new UserSelectionListener();
@@ -50,17 +53,33 @@ public class Profile implements Initializable {
         idLabel.setText("@" + user.getUserName());
         lastseenLabel.setText(String.valueOf(user.getLastSeen()));
 
-//        BufferedImage bufferedImage = null;
-//        try {
-//            bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + user.getAvatar()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        assert bufferedImage != null;
-//        Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-//
-//        avatar.setFill(new ImagePattern(image));
+
+        if (user.getAvatar() == null) {
+
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + imageConfig.getUser()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            avatar.setFill(new ImagePattern(image));
+
+        } else {
+
+            ByteArrayInputStream bis = new ByteArrayInputStream(user.getAvatar());
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(bis);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            avatar.setFill(new ImagePattern(image));
+
+        }
 
 
         if (user.getBiography() == null) {

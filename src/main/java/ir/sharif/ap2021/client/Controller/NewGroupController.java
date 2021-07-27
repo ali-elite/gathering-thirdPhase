@@ -26,9 +26,10 @@ public class NewGroupController {
 
             Platform.runLater(() -> {
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText(errorConfig.getMessageSent());
-        alert.showAndWait();
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText(errorConfig.getMessageSent());
+                alert.showAndWait();
+
             });
         }
 

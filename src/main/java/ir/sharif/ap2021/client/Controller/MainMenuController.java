@@ -135,10 +135,11 @@ public class MainMenuController {
                     if (chat.getName().equals(errorConfig.getSavedMessages()))
                         chatView.setUser(StaticController.getMyUser());
                     else {
-                        for(User us : chat.getUsers()){
-                            if(!us.equals(StaticController.getMyUser()))
+                        for (User us : chat.getUsers()) {
+                            if (!us.equals(StaticController.getMyUser())) {
                                 chatView.setUser(us);
-                            break;
+                                break;
+                            }
                         }
 
                     }
@@ -177,10 +178,11 @@ public class MainMenuController {
                     if (chat.getName().equals(errorConfig.getSavedMessages()))
                         chatView.setUser(StaticController.getMyUser());
                     else {
-                        for(User us : chat.getUsers()){
-                            if(!us.equals(StaticController.getMyUser()))
+                        for (User us : chat.getUsers()) {
+                            if (!us.equals(StaticController.getMyUser())) {
                                 chatView.setUser(us);
-                            break;
+                                break;
+                            }
                         }
 
                     }
@@ -232,10 +234,12 @@ public class MainMenuController {
                     if (chat.getName().equals(errorConfig.getSavedMessages()))
                         chatForwardView.setUser(StaticController.getMyUser());
                     else {
-                        for(User us : chat.getUsers()){
-                            if(!us.equals(StaticController.getMyUser()))
+                        for (User us : chat.getUsers()) {
+                            if (!us.equals(StaticController.getMyUser()))
                                 chatForwardView.setUser(us);
-                            break;
+                            {
+                                break;
+                            }
                         }
 
                     }
@@ -274,10 +278,11 @@ public class MainMenuController {
                     if (chat.getName().equals(errorConfig.getSavedMessages()))
                         chatForwardView.setUser(StaticController.getMyUser());
                     else {
-                        for(User us : chat.getUsers()){
-                            if(!us.equals(StaticController.getMyUser()))
+                        for (User us : chat.getUsers()) {
+                            if (!us.equals(StaticController.getMyUser())) {
                                 chatForwardView.setUser(us);
-                            break;
+                                break;
+                            }
                         }
 
                     }

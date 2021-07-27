@@ -1,5 +1,6 @@
 package ir.sharif.ap2021.client.View.ModelView;
 
+import ir.sharif.ap2021.client.Config.ErrorConfig;
 import ir.sharif.ap2021.client.Config.ImageConfig;
 import ir.sharif.ap2021.client.Controller.StaticController;
 import ir.sharif.ap2021.client.View.Menu.ChatMenu;
@@ -16,6 +17,7 @@ import javafx.scene.shape.Circle;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -24,6 +26,7 @@ import java.util.ResourceBundle;
 public class ChatView implements Initializable {
 
     ImageConfig imageConfig = new ImageConfig();
+    ErrorConfig errorConfig = new ErrorConfig();
 
     private Chat chat;
     private User user;
@@ -66,44 +69,48 @@ public class ChatView implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-//        if (chat.isGroup()) {
-//            avatar.setFill(new ImagePattern(new Image(imageConfig.getGroup())));
-//            label.setText(chat.getName());
-//        } else {
-//
-//            if (user != null) {
-//                BufferedImage bufferedImage = null;
-//                try {
-//                    bufferedImage = ImageIO.read(new File(imageConfig.getMainConfig().getResourcesPath() + user.getAvatar()));
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                assert bufferedImage != null;
-//                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-//
-//
-//                avatar.setFill(new ImagePattern(image));
-//                label.setText(user.getUserName());
-//            } else {
-//
-//
-//                BufferedImage bufferedImage = null;
-//                try {
-//                    bufferedImage = ImageIO.read(new File(imageConfig.getMainConfig().getResourcesPath() + StaticController.getMyUser().getAvatar()));
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//
-//                assert bufferedImage != null;
-//                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-//
-//
-//                avatar.setFill(new ImagePattern(image));
-//                label.setText("Saved Messages");
-//            }
-//
-//        }
+        if (chat.isGroup()) {
+
+            avatar.setFill(new ImagePattern(new Image(imageConfig.getGroup())));
+            label.setText(chat.getName());
+
+        } else {
+
+            if (!chat.getName().equals(errorConfig.getSavedMessages())) {
+                label.setText(user.getUserName());
+            } else {
+                label.setText(errorConfig.getSavedMessages());
+            }
+
+
+            if (user.getAvatar() == null) {
+
+                BufferedImage bufferedImage = null;
+                try {
+                    bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + imageConfig.getUser()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                assert bufferedImage != null;
+                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+                avatar.setFill(new ImagePattern(image));
+
+            } else {
+
+                ByteArrayInputStream bis = new ByteArrayInputStream(user.getAvatar());
+                BufferedImage bufferedImage = null;
+                try {
+                    bufferedImage = ImageIO.read(bis);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                assert bufferedImage != null;
+                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+                avatar.setFill(new ImagePattern(image));
+
+            }
+
+        }
 
         unseenText.setText(String.valueOf(unseen));
     }

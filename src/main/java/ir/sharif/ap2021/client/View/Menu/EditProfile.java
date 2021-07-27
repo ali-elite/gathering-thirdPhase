@@ -1,6 +1,7 @@
 package ir.sharif.ap2021.client.View.Menu;
 
 import ir.sharif.ap2021.client.Config.ErrorConfig;
+import ir.sharif.ap2021.client.Config.ImageConfig;
 import ir.sharif.ap2021.client.Controller.StaticController;
 import ir.sharif.ap2021.client.Listener.EditProfileListener;
 import ir.sharif.ap2021.shared.Event.EditProfileEvent;
@@ -17,6 +18,8 @@ import javafx.stage.FileChooser;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -27,6 +30,7 @@ public class EditProfile implements Initializable {
 
 
     ErrorConfig errorConfig = new ErrorConfig();
+    ImageConfig imageConfig = new ImageConfig();
 
     @FXML
     private TextField firstNameTF, lastNameTf, userNameTF,
@@ -42,8 +46,7 @@ public class EditProfile implements Initializable {
     @FXML
     private DatePicker birthday;
 
-
-    private boolean isChanged = false;
+    private byte[] data;
     private final EditProfileListener editProfileListener = new EditProfileListener(this);
 
     public EditProfile() throws IOException {
@@ -80,19 +83,15 @@ public class EditProfile implements Initializable {
 //            myLabel.setText(errorConfig.getValidPhone());
 //        }
 
-        String s = "";
-        if (isChanged) {
-            s = "change";
-            isChanged = false;
-        }
 
         EditProfileEvent editProfileEvent = new EditProfileEvent(firstNameTF.getText(),
                 lastNameTf.getText(), userNameTF.getText(), phoneTF.getText(), emailTF.getText(),
-                bioText.getText(), s, birthday.getValue()
-        );
+                bioText.getText(), birthday.getValue());
+
+        if (data != null)
+            editProfileEvent.setAvatar(data);
 
         editProfileListener.listen(editProfileEvent);
-
 
     }
 
@@ -105,14 +104,14 @@ public class EditProfile implements Initializable {
 
         if (file != null) {
 
+            BufferedImage bImage = ImageIO.read(file);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ImageIO.write(bImage, "png", bos);
+            data = bos.toByteArray();
+
             Image img = new Image(file.toURI().toString());
-
-            saveToFile(img, String.valueOf(StaticController.getMyUser().getId()));
             avatar.setFill(new ImagePattern(img));
-
-            isChanged = true;
-
-        } else isChanged = false;
+        }
 
 
     }
@@ -133,31 +132,32 @@ public class EditProfile implements Initializable {
         bioText.setText(StaticController.getMyUser().getBiography());
         birthday.setValue(StaticController.getMyUser().getBirthday());
 
-//        BufferedImage bufferedImage = null;
-//        try {
-//            bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + StaticController.getMyUser().getAvatar()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        assert bufferedImage != null;
-//        Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-//
-//        avatar.setFill(new ImagePattern(image));
+        if (StaticController.getMyUser().getAvatar() == null) {
 
-    }
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + imageConfig.getUser()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            avatar.setFill(new ImagePattern(image));
 
-    public void saveToFile(Image image, String name) throws IOException {
+        } else {
 
-        File fileOutput = new File(errorConfig.getMainConfig().getResourcesPath() + "/Avatars/" + name + ".png");
+            ByteArrayInputStream bis = new ByteArrayInputStream(StaticController.getMyUser().getAvatar());
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(bis);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            avatar.setFill(new ImagePattern(image));
 
-        if (fileOutput.exists()) {
-            fileOutput.delete();
         }
-
-        BufferedImage Bi = SwingFXUtils.fromFXImage(image, null);
-        ImageIO.write(Bi, "png", fileOutput);
-
     }
 
     public boolean checkNumber(String s) {
@@ -171,7 +171,7 @@ public class EditProfile implements Initializable {
         return true;
     }
 
-    public void answerError(String errorText){
+    public void answerError(String errorText) {
         Platform.runLater(() -> myLabel.setText(errorText));
 
     }

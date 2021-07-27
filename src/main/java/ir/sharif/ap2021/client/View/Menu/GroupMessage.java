@@ -7,7 +7,6 @@ import ir.sharif.ap2021.shared.Event.NewGroupEvent;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,6 +19,7 @@ import javafx.stage.FileChooser;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -42,7 +42,7 @@ public class GroupMessage implements Initializable {
     private ImageView messageIMG;
 
 
-    private boolean isChanged;
+    private byte[] data;
 
 
     public GroupMessage() throws IOException {
@@ -90,13 +90,9 @@ public class GroupMessage implements Initializable {
         if (messageText.getText() != null) {
 
             NewGroupEvent newGroupEvent = new NewGroupEvent("groupMessage", names, messageText.getText());
-
-            if (isChanged) {
-                newGroupEvent.setChanged("changed");
-            } else {
-                newGroupEvent.setChanged("no");
+            if(data != null){
+                newGroupEvent.setImage(data);
             }
-
 
             if (messageText.getText().length() <= 300) {
                 newGroupListener.listen(newGroupEvent);
@@ -129,13 +125,14 @@ public class GroupMessage implements Initializable {
 
         if (file != null) {
 
+            BufferedImage bImage = ImageIO.read(file);
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ImageIO.write(bImage, "png", bos);
+            data = bos.toByteArray();
+
             Image img = new Image(file.toURI().toString());
-
-            saveToFile(img, "311");
             messageIMG.setImage(img);
-
-            isChanged = true;
-        } else isChanged = false;
+        }
 
     }
 
@@ -148,18 +145,7 @@ public class GroupMessage implements Initializable {
         followerList.getItems().clear();
         selectedList.getItems().clear();
         initialize(null, null);
-    }
 
-    public void saveToFile(Image image, String name) throws IOException {
-
-        File fileOutput = new File(errorConfig.getMainConfig().getResourcesPath() + "/MessageImages/" + name + ".png");
-
-        if (fileOutput.exists()) {
-            fileOutput.delete();
-        }
-
-        BufferedImage Bi = SwingFXUtils.fromFXImage(image, null);
-        ImageIO.write(Bi, "png", fileOutput);
     }
 
 }

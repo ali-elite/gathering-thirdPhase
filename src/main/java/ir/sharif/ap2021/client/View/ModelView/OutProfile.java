@@ -30,6 +30,7 @@ import javafx.scene.shape.Circle;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -172,18 +173,32 @@ public class OutProfile implements Initializable {
             }
 
 
-//            BufferedImage bufferedImage = null;
-//            try {
-//                bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + user.getAvatar()));
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//
-//            assert bufferedImage != null;
-//            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-//
-//            avatar.setFill(new ImagePattern(image));
-//
+            if (user.getAvatar() == null) {
+
+                BufferedImage bufferedImage = null;
+                try {
+                    bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + imageConfig.getUser()));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                assert bufferedImage != null;
+                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+                avatar.setFill(new ImagePattern(image));
+
+            } else {
+
+                ByteArrayInputStream bis = new ByteArrayInputStream(user.getAvatar());
+                BufferedImage bufferedImage = null;
+                try {
+                    bufferedImage = ImageIO.read(bis);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                assert bufferedImage != null;
+                Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+                avatar.setFill(new ImagePattern(image));
+
+            }
             if (StaticController.getMyUser().getBlackList().contains(user.getId())) {
                 followIMG.setVisible(false);
                 menu.setVisible(false);

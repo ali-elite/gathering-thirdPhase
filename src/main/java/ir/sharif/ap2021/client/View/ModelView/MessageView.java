@@ -1,6 +1,7 @@
 package ir.sharif.ap2021.client.View.ModelView;
 
 import ir.sharif.ap2021.client.Config.ErrorConfig;
+import ir.sharif.ap2021.client.Config.ImageConfig;
 import ir.sharif.ap2021.client.Config.ItemConfig;
 import ir.sharif.ap2021.client.Controller.StaticController;
 import ir.sharif.ap2021.client.Listener.MessageListener;
@@ -23,6 +24,7 @@ import javafx.scene.shape.Polygon;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -32,6 +34,9 @@ public class MessageView implements Initializable {
 
     ItemConfig itemConfig = new ItemConfig();
     ErrorConfig errorConfig = new ErrorConfig();
+    ImageConfig imageConfig = new ImageConfig();
+
+
     MessageListener messageListener = new MessageListener(this);
 
     private Message message;
@@ -100,33 +105,47 @@ public class MessageView implements Initializable {
             }
         }
 
-//        BufferedImage bufferedImage = null;
-//        try {
-//            bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + sender.getAvatar()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        assert bufferedImage != null;
-//        Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-//
-//        avatar.setFill(new ImagePattern(image));
-//
-//
-//        if (message.getImage() != null) {
-//            BufferedImage bI = null;
-//            try {
-//                bI = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + message.getImage()));
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//
-//            assert bI != null;
-//            Image im = SwingFXUtils.toFXImage(bI, null);
-//
-//            messageImg.setImage(im);
-//        }
+        if (sender.getAvatar() == null) {
 
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + imageConfig.getUser()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            avatar.setFill(new ImagePattern(image));
+
+        } else {
+
+            ByteArrayInputStream bis = new ByteArrayInputStream(sender.getAvatar());
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(bis);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            avatar.setFill(new ImagePattern(image));
+        }
+
+
+        if (message.getImage() != null) {
+
+            ByteArrayInputStream bis = new ByteArrayInputStream(message.getImage());
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(bis);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            messageImg.setImage(image);
+
+        }
 
         editBtn.setVisible(false);
         editTextArea.setVisible(false);

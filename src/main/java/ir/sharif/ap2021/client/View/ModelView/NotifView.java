@@ -1,6 +1,7 @@
 package ir.sharif.ap2021.client.View.ModelView;
 
 import ir.sharif.ap2021.client.Config.ErrorConfig;
+import ir.sharif.ap2021.client.Config.ImageConfig;
 import ir.sharif.ap2021.client.Listener.NotifListener;
 import ir.sharif.ap2021.shared.Event.NotifEvent;
 import ir.sharif.ap2021.shared.Model.Notification;
@@ -17,6 +18,7 @@ import javafx.scene.shape.Circle;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -25,6 +27,7 @@ import java.util.ResourceBundle;
 public class NotifView implements Initializable {
 
     ErrorConfig errorConfig = new ErrorConfig();
+    ImageConfig imageConfig = new ImageConfig();
 
     private Notification notification;
     private NotifListener notifListener;
@@ -95,17 +98,32 @@ public class NotifView implements Initializable {
 
         textLabel.setText(notification.getText());
 
-//        BufferedImage bufferedImage = null;
-//        try {
-//            bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + user.getAvatar()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        assert bufferedImage != null;
-//        Image image = SwingFXUtils.toFXImage(bufferedImage, null);
-//
-//        avatar.setFill(new ImagePattern(image));
+        if (user.getAvatar() == null) {
+
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(new File(errorConfig.getMainConfig().getResourcesPath() + imageConfig.getUser()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            avatar.setFill(new ImagePattern(image));
+
+        } else {
+
+            ByteArrayInputStream bis = new ByteArrayInputStream(user.getAvatar());
+            BufferedImage bufferedImage = null;
+            try {
+                bufferedImage = ImageIO.read(bis);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            assert bufferedImage != null;
+            Image image = SwingFXUtils.toFXImage(bufferedImage, null);
+            avatar.setFill(new ImagePattern(image));
+
+        }
 
     }
 
