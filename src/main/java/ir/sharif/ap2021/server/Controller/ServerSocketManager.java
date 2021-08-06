@@ -1,6 +1,7 @@
 package ir.sharif.ap2021.server.Controller;
 
 
+import ir.sharif.ap2021.server.Config.NetworkConfig;
 import ir.sharif.ap2021.server.Controller.Network.ResponseSender;
 import ir.sharif.ap2021.server.Controller.Network.SocketResponseSender;
 import ir.sharif.ap2021.server.Hibernate.Connector;
@@ -20,20 +21,22 @@ public class ServerSocketManager {
     private final Connector connector;
     //    private final ModelLoader modelLoader;
     private final List<ClientHandler> clientHandlers;
+    private final NetworkConfig networkConfig;
     private volatile boolean running;
 
     public ServerSocketManager() throws IOException, DatabaseDisconnectException {
-//        Config config = ConfigFactory.getInstance().getConfig("SERVER_CONFIG");
-//        int port = config.getProperty(Integer.class, "PORT");
-//        connector = new Connector(ConfigFactory.getInstance().getConfigFile("SERVER_HIBERNATE_CONFIG")
-//                , System.getenv("HearthStone password"));
+
+        networkConfig = new NetworkConfig();
         connector = new Connector();
 //        modelLoader = new ModelLoader(connector);
-        int port = 8000;
-        serverSocket = new ServerSocket(port);
+        serverSocket = new ServerSocket(Integer.parseInt(networkConfig.getPort()));
         running = true;
         clientHandlers = Collections.synchronizedList(new ArrayList<>());
 //        gameLoader = new GameLoader();
+    }
+
+    public List<ClientHandler> getClientHandlers() {
+        return clientHandlers;
     }
 
     public void start() {
@@ -45,8 +48,8 @@ public class ServerSocketManager {
         while (running) {
             try {
                 Socket socket = serverSocket.accept();
-                ResponseSender responseSender = new SocketResponseSender(this,socket);
-                ClientHandler clientHandler = new ClientHandler(responseSender,connector);
+                ResponseSender responseSender = new SocketResponseSender(this, socket);
+                ClientHandler clientHandler = new ClientHandler(responseSender, connector, this);
                 clientHandlers.add(clientHandler);
                 clientHandler.start();
                 System.out.println(">>New Client Added");
@@ -64,35 +67,35 @@ public class ServerSocketManager {
         while (running) {
             System.out.println(">>type commands");
             System.out.println(">>type exit to shutdown server. make sure no client connected");
-            System.out.println(">>type add game to add game");
+            System.out.println(">>type add bot to add bot");
             switch (scanner.nextLine().strip()) {
                 case "exit" -> {
                     for (ClientHandler clientHandler : clientHandlers) {
-//                        try {
                         clientHandler.exit();
-//                        } catch (DatabaseDisconnectException ignored) {
-//                        }
                     }
                     running = false;
-//                    connector.close();
+                    connector.close();
                     try {
                         serverSocket.close();
                     } catch (IOException ignored) {
                     }
                     System.exit(0);
                 }
-                case "add game" -> {
+                case "number" -> {
+                    System.out.println(clientHandlers.size());
+                }
+                case "add bot" -> {
                     try {
-                        System.out.println(">>enter game name");
-                        String gameName = scanner.nextLine().strip();
+                        System.out.println(">>enter bot name");
+                        String botName = scanner.nextLine().strip();
                         System.out.println(">>enter jar url");
                         String jarUrl = scanner.nextLine().strip();
                         System.out.println(">>enter main class name");
                         String className = scanner.nextLine().strip();
-//                        gameLoader.loadGame(gameName, jarUrl, className, gameLobby);
+//                        botLoader.loadBot(botName, jarUrl, className, gameLobby);
                         System.out.println(">>successfully added");
                     } catch (Throwable e) {
-                        System.out.println(">>cant load game");
+                        System.out.println(">>cant load bot");
                         e.printStackTrace(System.out);
                     }
                 }

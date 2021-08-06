@@ -5,6 +5,7 @@ import ir.sharif.ap2021.server.Hibernate.Connector;
 import ir.sharif.ap2021.server.Hibernate.DatabaseDisconnectException;
 import ir.sharif.ap2021.shared.Event.MainMenuEvent;
 import ir.sharif.ap2021.shared.Model.Chat;
+import ir.sharif.ap2021.shared.Model.Message;
 import ir.sharif.ap2021.shared.Model.Thought;
 import ir.sharif.ap2021.shared.Model.User;
 import ir.sharif.ap2021.shared.Response.MainMenuResponse;
@@ -50,6 +51,20 @@ public class MainMenuController {
 
         if (order.equals("loadUser")) {
             MainMenuResponse loadResponse = new MainMenuResponse("loadUser");
+
+            // second checkmark checking
+            List<Chat> chats = connector.fetchAll(Chat.class);
+            for(Chat c : chats){
+                if(c.getUsers().contains(user)){
+                    for(Message m : c.getMessages()){
+                        if(m.getSender() != user && !m.isCheck2()){
+                            m.setCheck2(true);
+                            connector.save(m);
+                        }
+                    }
+                }
+            }
+
             loadResponse.setUser(user);
             return loadResponse;
         }

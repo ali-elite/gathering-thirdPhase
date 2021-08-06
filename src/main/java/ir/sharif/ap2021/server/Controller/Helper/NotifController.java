@@ -30,6 +30,10 @@ public class NotifController {
 
     public Response answer() throws DatabaseDisconnectException {
 
+        if(clientHandler.user == null){
+            return null;
+        }
+
         User myUser = connector.fetch(User.class,clientHandler.user.getId());
 
         if (notifEvent.getOrder().equals("load")) {

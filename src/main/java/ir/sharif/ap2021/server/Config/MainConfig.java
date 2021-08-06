@@ -14,6 +14,7 @@ public class MainConfig {
     private String fxmlConfigPath;
     private String errorConfigPath;
     private String itemConfigPath;
+    private String networkConfigPath;
 
 
     public MainConfig() throws IOException {
@@ -31,6 +32,7 @@ public class MainConfig {
         fxmlConfigPath = properties.getProperty("fxmlConfigPath");
         errorConfigPath = properties.getProperty("errorConfigPath");
         itemConfigPath = properties.getProperty("itemConfigPath");
+        networkConfigPath = properties.getProperty("networkConfigPath");
     }
 
 
@@ -52,5 +54,9 @@ public class MainConfig {
 
     public String getItemConfigPath() {
         return itemConfigPath;
+    }
+
+    public String getNetworkConfigPath() {
+        return networkConfigPath;
     }
 }

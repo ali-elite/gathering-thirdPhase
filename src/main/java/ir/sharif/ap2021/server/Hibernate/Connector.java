@@ -1,11 +1,14 @@
 package ir.sharif.ap2021.server.Hibernate;
 
+import ir.sharif.ap2021.server.Controller.ClientHandler;
 import ir.sharif.ap2021.shared.Model.Chat;
 import ir.sharif.ap2021.shared.Model.Notification;
 import ir.sharif.ap2021.shared.Model.Thought;
 import ir.sharif.ap2021.shared.Model.User;
 import ir.sharif.ap2021.shared.Util.Loop;
 import ir.sharif.ap2021.shared.Util.SaveAble;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
@@ -26,29 +29,18 @@ import java.util.Set;
 
 public class Connector {
     private final static Object staticLock = new Object();
-    private final static PrintStream logFilePrintStream;
     private Throwable lastThrowable;
 
-    static {
-        PrintStream temp;
-        String logPath = "./hibernate log" + File.separator + "hibernate log.txt";
-        try {
-            temp = new PrintStream(new File(logPath));
-        } catch (FileNotFoundException e) {
-            temp = System.err;
-        }
-        logFilePrintStream = temp;
-    }
 
     private final SessionFactory sessionFactory;
     private final Set<SaveAble> save, delete;
     private final Object lock;
     private final Loop worker;
 
+    private static final Logger logger = LogManager.getLogger(Connector.class);
+
 
     public Connector() throws DatabaseDisconnectException {
-
-//        sessionFactory = buildSessionFactory(addPassword(getServiceRegistryBuilder(configFile), password).build());
 
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("gatheringDB");
         EntityManager manager = entityManagerFactory.createEntityManager();
@@ -59,33 +51,9 @@ public class Connector {
         lock = new Object();
         worker = new Loop(10, this::persist);
         worker.start();
+
     }
 
-    private SessionFactory buildSessionFactory(StandardServiceRegistry registry) throws DatabaseDisconnectException {
-        try {
-            return new MetadataSources(registry).buildMetadata().buildSessionFactory();
-        } catch (Throwable throwable) {
-            throw new DatabaseDisconnectException(throwable);
-        }
-    }
-
-    private StandardServiceRegistryBuilder getServiceRegistryBuilder(File file) {
-        PrintStream err = System.err;
-        System.setErr(logFilePrintStream);
-        StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder().configure(file);
-        System.setErr(err);
-        return registryBuilder;
-    }
-
-    private StandardServiceRegistryBuilder addPassword(StandardServiceRegistryBuilder registryBuilder, String password) {
-        if (password != null) {
-            PrintStream err = System.err;
-            System.setErr(logFilePrintStream);
-            registryBuilder.applySetting("hibernate.connection.password", password);
-            System.setErr(err);
-        }
-        return registryBuilder;
-    }
 
     private void ensureOpen() throws DatabaseDisconnectException {
         if (lastThrowable != null)
@@ -109,6 +77,7 @@ public class Connector {
                 } catch (Throwable e) {
                     lastThrowable = e;
                     e.printStackTrace();
+                    logger.error("An error start transaction in Database: " + e.getMessage());
                     return;
                 }
                 for (SaveAble saveAble : tempDelete) {
@@ -117,6 +86,7 @@ public class Connector {
                     } catch (Throwable e) {
                         lastThrowable = e;
                         e.printStackTrace();
+                        logger.error("An error with Delete in Database: " + e.getMessage());
                         System.err.println("instance not deleted: " + saveAble);
                         return;
                     }
@@ -128,6 +98,7 @@ public class Connector {
                         lastThrowable = e;
                         e.printStackTrace();
                         System.err.println("instance not saved :" + saveAble);
+                        logger.error("An error with Save or Update in Database: " + e.getMessage());
                         return;
                     }
                 }
@@ -138,6 +109,7 @@ public class Connector {
                     e.printStackTrace();
                     System.err.println("instances not saved :" + tempSave);
                     System.err.println("instances not deleted :" + tempDelete);
+                    logger.error("An error with commit in Database: " + e.getMessage());
                 }
                 tempSave.clear();
                 tempDelete.clear();
@@ -176,6 +148,7 @@ public class Connector {
             } catch (Throwable e) {
                 lastThrowable = e;
                 e.printStackTrace();
+                logger.error("An error with Fetch in Database: " + e.getMessage());
                 throw new DatabaseDisconnectException(e);
             }
             session.close();
@@ -287,7 +260,6 @@ public class Connector {
 
         return null;
     }
-
 
     public Chat fetchChat(Chat chat) throws DatabaseDisconnectException {
         List<Chat> all = fetchAll(Chat.class);
