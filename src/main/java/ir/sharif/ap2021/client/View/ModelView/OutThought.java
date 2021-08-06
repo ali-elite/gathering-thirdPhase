@@ -1,6 +1,7 @@
 package ir.sharif.ap2021.client.View.ModelView;
 
 import ir.sharif.ap2021.client.Config.ErrorConfig;
+import ir.sharif.ap2021.client.Config.FxmlConfig;
 import ir.sharif.ap2021.client.Config.ImageConfig;
 import ir.sharif.ap2021.client.Controller.StaticController;
 import ir.sharif.ap2021.client.Listener.ThoughtListener;
@@ -8,10 +9,14 @@ import ir.sharif.ap2021.client.View.Menu.ForwardSelection;
 import ir.sharif.ap2021.shared.Event.ThoughtEvent;
 import ir.sharif.ap2021.shared.Model.Thought;
 import ir.sharif.ap2021.shared.Model.User;
+import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -33,21 +38,21 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
-
-public class ThoughtView implements Initializable {
+public class OutThought implements Initializable {
 
     ErrorConfig errorConfig = new ErrorConfig();
     ImageConfig imageConfig = new ImageConfig();
-
+    FxmlConfig fxmlConfig = new FxmlConfig();
 
     ThoughtListener thoughtListener = new ThoughtListener();
 
-    private User mainUser;
-    private User ownerUser;
-    private User doedUser;
-    private Thought thought;
+    private static User mainUser;
+    private static User ownerUser;
+    private static User doedUser;
+    private static Thought thought;
 
 
     @FXML
@@ -68,8 +73,8 @@ public class ThoughtView implements Initializable {
     private byte[] data;
     private final ArrayList<Pane> comments = new ArrayList<>();
 
-    public ThoughtView() throws IOException {
-        thoughtListener.setThoughtView(this);
+    public OutThought() throws IOException {
+        thoughtListener.setOutThought(this);
     }
 
 
@@ -77,38 +82,37 @@ public class ThoughtView implements Initializable {
         return comments;
     }
 
-    public User getMainUser() {
+    public static User getMainUser() {
         return mainUser;
     }
 
-    public void setMainUser(User mainUser) {
-        this.mainUser = mainUser;
+    public static void setMainUser(User mainUser) {
+        OutThought.mainUser = mainUser;
     }
 
-    public User getOwnerUser() {
+    public static User getOwnerUser() {
         return ownerUser;
     }
 
-    public void setOwnerUser(User ownerUser) {
-        this.ownerUser = ownerUser;
+    public static void setOwnerUser(User ownerUser) {
+        OutThought.ownerUser = ownerUser;
     }
 
-    public User getDoedUser() {
+    public static User getDoedUser() {
         return doedUser;
     }
 
-    public void setDoedUser(User doedUser) {
-        this.doedUser = doedUser;
+    public static void setDoedUser(User doedUser) {
+        OutThought.doedUser = doedUser;
     }
 
-    public Thought getThought() {
+    public static Thought getThought() {
         return thought;
     }
 
-    public void setThought(Thought thought) {
-        this.thought = thought;
+    public static void setThought(Thought thought) {
+        OutThought.thought = thought;
     }
-
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -308,14 +312,6 @@ public class ThoughtView implements Initializable {
         }
     }
 
-    public void getLink(ActionEvent event) throws IOException {
-
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("The Thought Id is: \n" + " @thought_" + thought.getId());
-        alert.showAndWait();
-
-    }
-
 
     public void reply(ActionEvent event) throws IOException {
 
@@ -337,7 +333,6 @@ public class ThoughtView implements Initializable {
             alert.showAndWait();
 
         }
-
 
     }
 
@@ -363,5 +358,23 @@ public class ThoughtView implements Initializable {
 
     }
 
+    public void doBack(ActionEvent actionEvent) throws IOException {
+        StaticController.getMyMainMenu().show();
+    }
 
+    public void getLink(ActionEvent actionEvent) {
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("The Thought Id is: \n" + " @thought_" + thought.getId());
+        alert.showAndWait();
+
+    }
+
+    public void show() throws IOException {
+
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlConfig.getOutThought())));
+        Scene scene = new Scene(root);
+        Platform.runLater(() -> StaticController.getMyStage().setScene(scene));
+
+    }
 }

@@ -2,8 +2,10 @@ package ir.sharif.ap2021.client.Controller.Network;
 
 import ir.sharif.ap2021.client.Listener.*;
 import ir.sharif.ap2021.shared.Event.Event;
+import ir.sharif.ap2021.shared.Event.ExitEvent;
 import ir.sharif.ap2021.shared.Response.*;
 import ir.sharif.ap2021.shared.Util.Loop;
+import javafx.application.Platform;
 
 
 import java.io.IOException;
@@ -63,7 +65,15 @@ public class ClientController implements ResponseVisitor {
 
     @Override
     public void exit() {
+
+        synchronized (events) {
+            events.clear();
+            eventListeners.clear();
+            loop.stop();
+        }
+
         eventSender.close();
+        Platform.exit();
         System.exit(0);
     }
 
@@ -304,7 +314,11 @@ public class ClientController implements ResponseVisitor {
 
         for (EventListener eventListener : temp) {
             if (eventListener instanceof MessageListener) {
-                ((MessageListener) eventListener).handle(messageResponse);
+                try {
+                    ((MessageListener) eventListener).handle(messageResponse);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 temp.remove(eventListener);
                 eventListeners.addAll(temp);
                 break;

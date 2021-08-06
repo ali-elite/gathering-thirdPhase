@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
@@ -31,19 +33,44 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <Label fx:id="forwardLabel" alignment="CENTER" layoutX="189.0" layoutY="6.0" prefHeight="26.0" prefWidth="113.0" text="Forwarded" textFill="#132081">
+            <Label fx:id="forwardLabel" alignment="CENTER" layoutX="166.0" layoutY="6.0" prefHeight="26.0" prefWidth="104.0" text="Forwarded" textFill="#132081">
                <font>
-                  <Font name="System Bold" size="17.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label fx:id="userLabel" alignment="CENTER" prefHeight="38.0" prefWidth="166.0" text="username" textFill="#4d0202db">
+            <Label fx:id="userLabel" layoutX="16.0" prefHeight="38.0" prefWidth="150.0" text="username" textAlignment="RIGHT" textFill="#4d0202db">
                <font>
                   <Font name="Comic Sans MS Bold Italic" size="19.0" />
                </font>
             </Label>
-            <ImageView fx:id="messageImg" fitHeight="162.0" fitWidth="187.0" layoutX="420.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" />
-            <TextArea fx:id="editTextArea" layoutX="14.0" layoutY="55.0" prefHeight="148.0" prefWidth="368.0" />
+            <ImageView fx:id="messageImg" fitHeight="142.0" fitWidth="204.0" layoutX="398.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
+            <TextArea fx:id="editTextArea" layoutX="14.0" layoutY="41.0" prefHeight="162.0" prefWidth="368.0" />
             <Button fx:id="editBtn" layoutX="535.0" layoutY="6.0" mnemonicParsing="false" onAction="#edit" prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: lightgreen;" text="edit" />
+            <Label fx:id="timeLabel" alignment="CENTER" layoutX="280.0" prefHeight="38.0" prefWidth="233.0" text="time" textAlignment="RIGHT" textFill="#006a6edb">
+               <font>
+                  <Font name="MV Boli" size="19.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="check1" fitHeight="26.0" fitWidth="33.0" layoutX="589.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/check.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="check2" fitHeight="26.0" fitWidth="33.0" layoutX="575.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/check.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="check3" fitHeight="26.0" fitWidth="33.0" layoutX="563.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/check.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="hypertext" alignment="TOP_LEFT" layoutX="20.0" layoutY="44.0" onAction="#hyper" prefHeight="154.0" prefWidth="355.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Hyperlink>
          </children>
       </AnchorPane>
       <Polygon fx:id="triangle" fill="WHITE" layoutX="97.0" layoutY="178.0" points="64.0, -11.600006103515625, 30.79998779296875, 82.79998779296875, 64.0, 58.399993896484375" stroke="WHITE" strokeType="INSIDE" />

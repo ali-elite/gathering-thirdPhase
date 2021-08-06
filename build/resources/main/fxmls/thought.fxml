@@ -71,6 +71,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#reportSpam" text="Report spam" />
                   <MenuItem mnemonicParsing="false" onAction="#authorProfile" text="Author profile" />
                   <MenuItem mnemonicParsing="false" onAction="#showOpinions" text="Show opinions" />
+                  <MenuItem mnemonicParsing="false" onAction="#getLink" text="Get Link" />
             </items>
           </Menu>
         </menus>

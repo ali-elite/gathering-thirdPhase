@@ -20,3 +20,4 @@ signup=/fxmls/signup.fxml
 thought=/fxmls/thought.fxml
 timeline=/fxmls/timeline.fxml
 userSelection=/fxmls/userSelection.fxml
+outThought=/fxmls/outThought.fxml

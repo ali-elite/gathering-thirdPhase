@@ -2,6 +2,7 @@ package ir.sharif.ap2021.client.Listener;
 
 
 import ir.sharif.ap2021.client.Controller.ThoughtController;
+import ir.sharif.ap2021.client.View.ModelView.OutThought;
 import ir.sharif.ap2021.client.View.ModelView.ThoughtView;
 import ir.sharif.ap2021.shared.Event.Event;
 import ir.sharif.ap2021.shared.Response.ThoughtResponse;
@@ -13,12 +14,12 @@ public class ThoughtListener implements EventListener {
 
 
     private ThoughtView thoughtView;
+    private OutThought outThought;
     ThoughtController thoughtController = new ThoughtController();
 
 
     public ThoughtListener() throws IOException {
     }
-
 
 
     @Override
@@ -32,7 +33,12 @@ public class ThoughtListener implements EventListener {
         if (thoughtResponse.getOrder().equals("opinions")) {
             thoughtController.opinion(thoughtResponse);
         } else {
-            thoughtController.change(thoughtResponse, thoughtView);
+
+            if (thoughtView != null) {
+                thoughtController.change(thoughtResponse, thoughtView);
+            } else {
+                thoughtController.change(thoughtResponse, outThought);
+            }
         }
 
     }
@@ -51,5 +57,13 @@ public class ThoughtListener implements EventListener {
 
     public void setThoughtController(ThoughtController thoughtController) {
         this.thoughtController = thoughtController;
+    }
+
+    public OutThought getOutThought() {
+        return outThought;
+    }
+
+    public void setOutThought(OutThought outThought) {
+        this.outThought = outThought;
     }
 }

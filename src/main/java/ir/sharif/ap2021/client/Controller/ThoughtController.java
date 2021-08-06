@@ -3,6 +3,7 @@ package ir.sharif.ap2021.client.Controller;
 import ir.sharif.ap2021.client.Config.ErrorConfig;
 import ir.sharif.ap2021.client.Config.FxmlConfig;
 import ir.sharif.ap2021.client.View.Menu.Opinions;
+import ir.sharif.ap2021.client.View.ModelView.OutThought;
 import ir.sharif.ap2021.client.View.ModelView.ThoughtView;
 import ir.sharif.ap2021.shared.Model.Thought;
 import ir.sharif.ap2021.shared.Response.ThoughtResponse;
@@ -23,8 +24,7 @@ public class ThoughtController {
     public ThoughtController() throws IOException {
     }
 
-
-    public void change(ThoughtResponse response, ThoughtView thoughtView) throws IOException {
+    public void change(ThoughtResponse response, ThoughtView thoughtView) {
 
         if (response.getOrder().equals("like")) {
 
@@ -81,6 +81,79 @@ public class ThoughtController {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText(errorConfig.getSpammed());
             alert.showAndWait();
+
+            });
+
+
+        }
+
+
+        if (response.getOrder().equals("saveMessage")) {
+
+            StaticController.setMyUser(response.getMyUser());
+
+        }
+
+
+    }
+
+    public void change(ThoughtResponse response, OutThought thoughtView) {
+
+        if (response.getOrder().equals("like")) {
+
+            StaticController.setMyUser(response.getMyUser());
+            Platform.runLater(() -> {
+                thoughtView.setThought(response.getThought());
+                thoughtView.reload();
+            });
+
+
+        }
+
+
+        if (response.getOrder().equals("ret")) {
+
+            StaticController.setMyUser(response.getMyUser());
+            Platform.runLater(() -> {
+                thoughtView.setThought(response.getThought());
+                thoughtView.reload();
+            });
+
+        }
+
+        if (response.getOrder().equals("mention")) {
+
+
+            StaticController.setMyUser(response.getMyUser());
+            Platform.runLater(() -> {
+                thoughtView.setThought(response.getThought());
+                thoughtView.reload();
+            });
+
+
+        }
+
+        if (response.getOrder().equals("muteAuthor")) {
+
+            StaticController.setMyUser(response.getMyUser());
+
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText(errorConfig.getMuted());
+                alert.showAndWait();
+
+            });
+
+        }
+
+        if (response.getOrder().equals("spam")) {
+
+            Platform.runLater(() -> {
+                thoughtView.setThought(response.getThought());
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText(errorConfig.getSpammed());
+                alert.showAndWait();
 
             });
 

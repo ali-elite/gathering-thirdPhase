@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="599.0" prefWidth="805.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.sharif.ap2021.client.View.ModelView.OutThought">
+   <children>
+      <AnchorPane layoutY="100.0" prefHeight="396.0" prefWidth="743.0" style="-fx-background-color: #000112;">
+          <children>
+              <Label fx:id="text" alignment="TOP_LEFT" layoutX="80.0" layoutY="117.0" prefHeight="115.0" prefWidth="659.0" text="Tweet text" textFill="WHITE">
+                  <font>
+                      <Font name="Freestyle Script" size="24.0" />
+                  </font>
+            </Label>
+              <ImageView fx:id="likeIMG" fitHeight="45.0" fitWidth="40.0" layoutX="115.0" layoutY="322.0" onMouseClicked="#like" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../images/like.png" />
+                  </image>
+              </ImageView>
+              <Circle fx:id="avatar" fill="DODGERBLUE" layoutX="64.0" layoutY="57.0" radius="53.0" stroke="BLACK" strokeType="INSIDE" />
+              <ImageView fx:id="retIMG" fitHeight="50.0" fitWidth="48.0" layoutX="349.0" layoutY="321.0" onMouseClicked="#ret" pickOnBounds="true">
+                  <image>
+                      <Image url="@../images/ret.png" />
+                  </image>
+              </ImageView>
+              <ImageView fx:id="opIMG" fitHeight="43.0" fitWidth="48.0" layoutX="594.0" layoutY="328.0" onMouseClicked="#mention" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                      <Image url="@../images/comment.png" />
+                  </image>
+                  <effect>
+                      <ColorAdjust brightness="0.49" contrast="-1.0" hue="0.02" saturation="-0.38" />
+                  </effect>
+              </ImageView>
+              <Label fx:id="likes" alignment="CENTER" layoutX="171.0" layoutY="331.0" prefHeight="36.0" prefWidth="61.0" text="Label">
+                  <font>
+                      <Font size="19.0" />
+                  </font>
+              </Label>
+              <Label fx:id="rets" alignment="CENTER" layoutX="397.0" layoutY="330.0" prefHeight="36.0" prefWidth="61.0" text="Label">
+                  <font>
+                      <Font size="19.0" />
+                  </font>
+              </Label>
+              <Label fx:id="opinions" alignment="CENTER" layoutX="652.0" layoutY="330.0" prefHeight="36.0" prefWidth="61.0" text="Label">
+                  <font>
+                      <Font size="19.0" />
+                  </font>
+              </Label>
+              <Label fx:id="timeLabel" alignment="TOP_LEFT" layoutX="465.0" layoutY="21.0" prefHeight="30.0" prefWidth="238.0" text="Time" textFill="#ee00ff">
+                  <font>
+                      <Font name="System Bold" size="14.0" />
+                  </font>
+            </Label>
+              <Label fx:id="statusLabel" layoutX="150.0" layoutY="18.0" prefHeight="30.0" prefWidth="278.0" text="Reply Status" textFill="#00ff33">
+                  <font>
+                      <Font name="System Bold" size="12.0" />
+                  </font>
+            </Label>
+              <MenuBar layoutX="732.0" layoutY="33.0" prefHeight="22.0" prefWidth="32.0" style="-fx-background-color: #000112;">
+                  <menus>
+                      <Menu mnemonicParsing="false" style="-fx-background-color: yellow;" text="...">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#saveMessage" text="Save as a message" />
+                              <MenuItem mnemonicParsing="false" onAction="#forwardMessage" text="Forward message" />
+                              <MenuItem mnemonicParsing="false" onAction="#muteAuthor" text="Mute author" />
+                              <MenuItem mnemonicParsing="false" onAction="#reportSpam" text="Report spam" />
+                              <MenuItem mnemonicParsing="false" onAction="#authorProfile" text="Author profile" />
+                              <MenuItem mnemonicParsing="false" onAction="#showOpinions" text="Show opinions" />
+                        <MenuItem mnemonicParsing="false" onAction="#getLink" text="Get Link" />
+                          </items>
+                      </Menu>
+                  </menus>
+              </MenuBar>
+              <AnchorPane fx:id="replyPane" layoutY="382.0" prefHeight="118.0" prefWidth="800.0" style="-fx-background-color: yellow;">
+                  <children>
+                      <Button fx:id="replyBtn" layoutX="106.0" layoutY="82.0" mnemonicParsing="false" onAction="#reply" prefHeight="32.0" prefWidth="106.0" stylesheets="@../css/glassBtn.css" text="Reply" />
+                      <TextArea fx:id="replyText" prefHeight="75.0" prefWidth="491.0" promptText="Enter your opinion about this thought">
+                          <font>
+                              <Font name="Calibri" size="15.0" />
+                          </font>
+                      </TextArea>
+                      <Button fx:id="insertBtn" layoutX="593.0" layoutY="82.0" mnemonicParsing="false" onAction="#insert" prefHeight="32.0" prefWidth="139.0" stylesheets="@../css/glassBtn.css" text="Insert Photo" />
+                      <ImageView fx:id="oIMG" fitHeight="61.0" fitWidth="222.0" layoutX="534.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+                  </children>
+              </AnchorPane>
+              <ImageView fx:id="tIMG" fitHeight="75.0" fitWidth="729.0" layoutX="35.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" />
+              <Label fx:id="namesLabel" layoutX="127.0" layoutY="54.0" prefHeight="43.0" prefWidth="491.0" text="Label" textFill="#ff5a00">
+                  <font>
+                      <Font name="Corbel Bold" size="25.0" />
+                  </font>
+              </Label>
+          </children>
+      </AnchorPane>
+      <ToolBar prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #000112;">
+         <items>
+            <Button mnemonicParsing="false" onAction="#doBack" prefHeight="35.0" prefWidth="150.0" stylesheets="@../css/mainButtons.css" text="Back" />
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

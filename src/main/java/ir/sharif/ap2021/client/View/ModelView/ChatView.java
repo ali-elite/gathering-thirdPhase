@@ -2,7 +2,6 @@ package ir.sharif.ap2021.client.View.ModelView;
 
 import ir.sharif.ap2021.client.Config.ErrorConfig;
 import ir.sharif.ap2021.client.Config.ImageConfig;
-import ir.sharif.ap2021.client.Controller.StaticController;
 import ir.sharif.ap2021.client.View.Menu.ChatMenu;
 import ir.sharif.ap2021.shared.Model.Chat;
 import ir.sharif.ap2021.shared.Model.User;

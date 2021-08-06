@@ -57,6 +57,18 @@ lastSeenRecently=Last Seen Recently
 spammed=Spam reported successfully
 deactiveUser= Sorry This User has deactivated
 noServer=Could not connect to the server
+leftTheGroup=You Left The Group
+scheduled=Your Message Scheduled in Our server
+unblocked=User unblocked
+shutdownServer=Oops! Server got shutdown I guess
+selfMute=You Cannot Mute Yourself
+noHyperlink=You cannot use this hyperlink because of security reasons
+joinGroup=You Joined The Group and if you were already there you just made a shortcut
+alreadyLeftGp=You Already Left This Group
+thoughtCreated=Your Thought Created Successfully
+invalidHour=Invalid hour
+invalidMinuts=Invalid minuts
+timeMachine=This is not a Time Machine Bro
 
 
 

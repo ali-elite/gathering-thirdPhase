@@ -68,7 +68,18 @@ public class ErrorConfig {
     private String spammed;
     private String deactiveUser;
     private String noServer;
-
+    private String lefTheGroup;
+    private String scheduled;
+    private String unblocked;
+    private String shutdownServer;
+    private String selfMute;
+    private String noHyperlink;
+    private String joinGroup;
+    private String alreadyLeftGp;
+    private String thoughtCreated;
+    private String invalidHour;
+    private String invalidMinuts;
+    private String timeMachine;
 
 
     public ErrorConfig() throws IOException {
@@ -141,6 +152,19 @@ public class ErrorConfig {
         spammed = properties.getProperty("spammed");
         deactiveUser = properties.getProperty("deactiveUser");
         noServer = properties.getProperty("noServer");
+        lefTheGroup = properties.getProperty("lefTheGroup");
+        scheduled = properties.getProperty("scheduled");
+        unblocked = properties.getProperty("unblocked");
+        shutdownServer = properties.getProperty("shutdownServer");
+        selfMute = properties.getProperty("selfMute");
+        noHyperlink = properties.getProperty("noHyperlink");
+        joinGroup = properties.getProperty("joinGroup");
+        alreadyLeftGp = properties.getProperty("alreadyLeftGp");
+        thoughtCreated = properties.getProperty("thoughtCreated");
+        invalidHour = properties.getProperty("invalidHour");
+        invalidMinuts = properties.getProperty("invalidMinuts");
+        timeMachine = properties.getProperty("timeMachine");
+
     }
 
     public MainConfig getMainConfig() {
@@ -381,5 +405,53 @@ public class ErrorConfig {
 
     public String getNoServer() {
         return noServer;
+    }
+
+    public String getLefTheGroup() {
+        return lefTheGroup;
+    }
+
+    public String getScheduled() {
+        return scheduled;
+    }
+
+    public String getUnblocked() {
+        return unblocked;
+    }
+
+    public String getShutdownServer() {
+        return shutdownServer;
+    }
+
+    public String getSelfMute() {
+        return selfMute;
+    }
+
+    public String getNoHyperlink() {
+        return noHyperlink;
+    }
+
+    public String getJoinGroup() {
+        return joinGroup;
+    }
+
+    public String getAlreadyLeftGp() {
+        return alreadyLeftGp;
+    }
+
+    public String getThoughtCreated() {
+        return thoughtCreated;
+    }
+
+    public String getInvalidHour() {
+        return invalidHour;
+    }
+
+    public String getInvalidMinuts() {
+        return invalidMinuts;
+    }
+
+    public String getTimeMachine() {
+        return timeMachine;
     }
 }

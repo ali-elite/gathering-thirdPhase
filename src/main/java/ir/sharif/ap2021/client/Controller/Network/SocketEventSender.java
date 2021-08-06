@@ -10,7 +10,10 @@ import ir.sharif.ap2021.shared.Response.MainMenuResponse;
 import ir.sharif.ap2021.shared.Response.Response;
 import ir.sharif.ap2021.shared.Util.Gson.*;
 import ir.sharif.ap2021.shared.Util.Letter;
-
+import javafx.application.Platform;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 
 
 import java.io.IOException;
@@ -33,7 +36,7 @@ public class SocketEventSender implements EventSender {
         printStream = new PrintStream(socket.getOutputStream());
         gson = new GsonBuilder()
                 .registerTypeAdapter(Event.class, new EventAdapter())
-                .registerTypeAdapter(Response.class,new ResponseAdapter())
+                .registerTypeAdapter(Response.class, new ResponseAdapter())
                 .registerTypeAdapter(LocalDate.class, new LocalDateSerializer())
                 .registerTypeAdapter(LocalDate.class, new LocalDateDeserializer())
                 .registerTypeAdapter(LocalDateTime.class, new LocalDateTimeSerializer())
@@ -46,7 +49,21 @@ public class SocketEventSender implements EventSender {
         Letter requestLetter = new Letter(token, event);
         String encode = encoder.encodeToString(toJson(requestLetter).getBytes());
         printStream.println(encode);
-        String json = scanner.nextLine();
+        String json = null;
+        try {
+            json = scanner.nextLine();
+        } catch (Exception e) {
+
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Oops! Server got shutdown I guess");
+                alert.showAndWait();
+            });
+
+            Platform.exit();
+            System.exit(0);
+
+        }
         String decode = new String(decoder.decode(json.getBytes()));
         Letter responseLetter = toMessage(decode);
         checkToken(responseLetter);

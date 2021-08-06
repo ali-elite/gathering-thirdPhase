@@ -7,17 +7,15 @@ import ir.sharif.ap2021.client.Listener.ChatListener;
 import ir.sharif.ap2021.shared.Event.ChatEvent;
 import ir.sharif.ap2021.shared.Model.Chat;
 import javafx.application.Platform;
-import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.ToolBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -30,6 +28,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -52,6 +53,12 @@ public class ChatMenu implements Initializable {
     private ToolBar bar;
     @FXML
     private ImageView chosenImg;
+    @FXML
+    private TextField messageMinuts, messageHour;
+    @FXML
+    private DatePicker messageDatePicker;
+    @FXML
+    private Button leaveBtn, getLinkBtn;
 
     private static final ArrayList<Pane> messages = new ArrayList<>();
 
@@ -64,7 +71,6 @@ public class ChatMenu implements Initializable {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlConfig.getChatmenu())));
         Scene scene = new Scene(root);
         Platform.runLater(() -> StaticController.getMyStage().setScene(scene));
-
 
     }
 
@@ -103,6 +109,11 @@ public class ChatMenu implements Initializable {
 
         screenScroll.setContent(vbox);
 
+        if (!chat.isGroup()) {
+            leaveBtn.setVisible(false);
+            getLinkBtn.setVisible(false);
+        }
+
     }
 
 
@@ -111,7 +122,7 @@ public class ChatMenu implements Initializable {
         ChatEvent chatEvent = new ChatEvent("send");
         chatEvent.setChatId(chat.getId());
         chatEvent.setPm(textField.getText());
-        if(data != null){
+        if (data != null) {
             chatEvent.setImage(data);
         }
 
@@ -151,7 +162,6 @@ public class ChatMenu implements Initializable {
     }
 
 
-
     public void afterSend() {
 
         Platform.runLater(() -> {
@@ -162,5 +172,90 @@ public class ChatMenu implements Initializable {
 
 
     }
+
+
+    public void sendScheduled(ActionEvent actionEvent) {
+
+
+        if (!checkDigit(messageHour.getText()) || Integer.parseInt(messageHour.getText()) > 24 || Integer.parseInt(messageHour.getText()) < 0) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(errorConfig.getInvalidHour());
+            alert.showAndWait();
+            return;
+        }
+        if (!checkDigit(messageMinuts.getText()) || Integer.parseInt(messageMinuts.getText()) > 60 || Integer.parseInt(messageMinuts.getText()) < 0) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(errorConfig.getInvalidMinuts());
+            alert.showAndWait();
+            return;
+        }
+
+        LocalDate date = messageDatePicker.getValue();
+        LocalTime time = LocalTime.of(Integer.parseInt(messageHour.getText()), Integer.parseInt(messageMinuts.getText()));
+        LocalDateTime localDateTime = LocalDateTime.of(date, time);
+
+        if (localDateTime.isBefore(LocalDateTime.now())) {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(errorConfig.getTimeMachine());
+            alert.showAndWait();
+
+        } else {
+
+            ChatEvent chatEvent = new ChatEvent("sendScheduled");
+            chatEvent.setChatId(chat.getId());
+            chatEvent.setPm(textField.getText());
+            chatEvent.setLocalDateTime(localDateTime);
+            if (data != null) {
+                chatEvent.setImage(data);
+            }
+
+            if (textField.getText().length() <= 300) {
+                chatListener.listen(chatEvent);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText(errorConfig.getMessageLength());
+                alert.showAndWait();
+            }
+        }
+
+
+    }
+
+    public void leaveGroup(ActionEvent actionEvent) {
+
+        ChatEvent chatEvent = new ChatEvent("leaveGroup");
+        chatEvent.setChatId(chat.getId());
+        if (chat.getUsers().contains(StaticController.getMyUser())) {
+            chatListener.listen(chatEvent);
+        } else {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(errorConfig.getAlreadyLeftGp());
+            alert.showAndWait();
+
+        }
+
+
+    }
+
+    public void groupLink(ActionEvent actionEvent) {
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("The Group Id is: \n" + " @gp_" + chat.getId());
+        alert.showAndWait();
+
+    }
+
+    private boolean checkDigit(String s) {
+
+        for (int i = 0; i < s.length(); i++) {
+            if (!Character.isDigit(s.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 }

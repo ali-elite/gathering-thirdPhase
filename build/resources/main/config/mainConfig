@@ -3,5 +3,6 @@ imageConfigPath=src/main/resources/config/imageConfig
 fxmlConfigPath=src/main/resources/config/fxmlConfig
 errorConfigPath=src/main/resources/config/errorConfig
 itemConfigPath=src/main/resources/config/itemConfig
+networkConfigPath=src/main/resources/config/networkConfig
 
 

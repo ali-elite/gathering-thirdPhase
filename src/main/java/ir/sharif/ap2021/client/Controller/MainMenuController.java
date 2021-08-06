@@ -329,8 +329,9 @@ public class MainMenuController {
 
     public void logOut(Mainmenu mainmenu) throws IOException {
 
+        StaticController.setMyUser(null);
         Stage stage = StaticController.getMyStage();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlConfig.getApp())));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlConfig.getLogin())));
         Scene scene = new Scene(root);
         Platform.runLater(() -> stage.setScene(scene));
 
@@ -397,7 +398,7 @@ public class MainMenuController {
 
         Platform.runLater(() -> {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("User unblocked");
+            alert.setContentText(errorConfig.getUnblocked());
             alert.showAndWait();
 
         });

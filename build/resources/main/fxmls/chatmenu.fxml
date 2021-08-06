@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.sharif.ap2021.client.View.Menu.ChatMenu">
    <children>
-    <Button fx:id="backBtn" layoutX="635.0" layoutY="7.0" mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="74.0" stylesheets="@../css/mainButtons.css" text="Back" />
-      <ScrollPane fx:id="screenScroll" fitToHeight="true" fitToWidth="true" layoutY="56.0" prefHeight="431.0" prefWidth="800.0" />
+    <Button fx:id="backBtn" layoutX="644.0" layoutY="7.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="161.0" stylesheets="@../css/mainButtons.css" text="Back" />
+      <ScrollPane fx:id="screenScroll" fitToHeight="true" fitToWidth="true" layoutY="56.0" prefHeight="431.0" prefWidth="800.0">
+         <content>
+            <TextField />
+         </content></ScrollPane>
       <AnchorPane layoutY="486.0" prefHeight="114.0" prefWidth="800.0" style="-fx-background-color: black;">
          <children>
-            <TextArea fx:id="textField" layoutX="7.0" layoutY="8.0" prefHeight="98.0" prefWidth="470.0" promptText="Enter your message..." style="-fx-background-color: yellow;" />
-            <Button fx:id="sendBtn" layoutX="658.0" layoutY="10.0" mnemonicParsing="false" onAction="#send" prefHeight="56.0" prefWidth="133.0" stylesheets="@../css/glassBtn.css" text="Send" />
-            <Button fx:id="attachBtn" layoutX="677.0" layoutY="74.0" mnemonicParsing="false" onAction="#attach" prefHeight="32.0" prefWidth="96.0" stylesheets="@../css/glassBtn.css" text="Attach" />
-            <ImageView fx:id="chosenImg" fitHeight="90.0" fitWidth="143.0" layoutX="499.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+            <TextArea fx:id="textField" layoutX="7.0" layoutY="8.0" prefHeight="98.0" prefWidth="346.0" promptText="Enter your message..." style="-fx-background-color: yellow;" />
+            <Button fx:id="sendBtn" layoutX="685.0" layoutY="47.0" mnemonicParsing="false" onAction="#send" prefHeight="59.0" prefWidth="101.0" stylesheets="@../css/glassBtn.css" text="Send" />
+            <Button fx:id="attachBtn" layoutX="584.0" layoutY="57.0" mnemonicParsing="false" onAction="#attach" prefHeight="40.0" prefWidth="95.0" stylesheets="@../css/glassBtn.css" text="Attach" />
+            <ImageView fx:id="chosenImg" fitHeight="105.0" fitWidth="202.0" layoutX="362.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
             </ImageView>
+            <Button fx:id="sendScheduledBtn" alignment="CENTER" layoutX="577.0" layoutY="8.0" mnemonicParsing="false" onAction="#sendScheduled" prefHeight="32.0" prefWidth="209.0" stylesheets="@../css/glassBtn.css" text="Send Scheduled" />
+            <ImageView fx:id="chosenImg1" fitHeight="105.0" fitWidth="202.0" layoutX="362.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
+      <Button fx:id="leaveBtn" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onAction="#leaveGroup" prefHeight="40.0" prefWidth="213.0" stylesheets="@../css/mainButtons.css" text="Leave Group" />
+      <DatePicker fx:id="messageDatePicker" layoutX="342.0" layoutY="14.0" prefHeight="25.0" prefWidth="170.0" promptText="Enter Messsage Date" />
+      <TextField fx:id="messageHour" layoutX="519.0" layoutY="14.0" prefHeight="25.0" prefWidth="55.0" promptText="Hour" />
+      <TextField fx:id="messageMinuts" layoutX="581.0" layoutY="14.0" prefHeight="25.0" prefWidth="55.0" promptText="Minuts" />
+      <Button fx:id="getLinkBtn" layoutX="175.0" layoutY="7.0" mnemonicParsing="false" onAction="#groupLink" prefHeight="40.0" prefWidth="213.0" stylesheets="@../css/mainButtons.css" text="Get Group Link" />
    </children>
 </AnchorPane>

@@ -3,11 +3,15 @@ package ir.sharif.ap2021.client;
 import ir.sharif.ap2021.client.Config.ErrorConfig;
 import ir.sharif.ap2021.client.Config.FxmlConfig;
 import ir.sharif.ap2021.client.Config.ImageConfig;
+import ir.sharif.ap2021.client.Config.NetworkConfig;
 import ir.sharif.ap2021.client.Controller.Network.ClientController;
 import ir.sharif.ap2021.client.Controller.Network.SocketEventSender;
 import ir.sharif.ap2021.client.Controller.StaticController;
+import ir.sharif.ap2021.shared.Event.ExitEvent;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,8 +20,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import javafx.stage.WindowEvent;
+
 
 import java.io.IOException;
 import java.net.Socket;
@@ -25,14 +29,13 @@ import java.util.Objects;
 
 public class App extends Application {
 
-
-    private static final Logger logger = LogManager.getLogger(App.class);
     private FxmlConfig fxmlConfig = new FxmlConfig();
     private ImageConfig imageConfig = new ImageConfig();
     private ErrorConfig errorConfig = new ErrorConfig();
+    private NetworkConfig networkConfig = new NetworkConfig();
 
     @FXML
-    private Button signBtn, loginBtn, offlineBtn;
+    private Button signBtn, loginBtn;
 
     public App() throws IOException {
     }
@@ -49,9 +52,19 @@ public class App extends Application {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.getIcons().add(new Image(imageConfig.getLogo()));
-        primaryStage.show();
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
 
-        logger.info("App Started");
+                if (StaticController.getMyUser() != null) {
+                    StaticController.getClientController().addEvent(new ExitEvent());
+                } else {
+                    Platform.exit();
+                    System.exit(0);
+                }
+            }
+        });
+        primaryStage.show();
     }
 
 
@@ -64,7 +77,7 @@ public class App extends Application {
 
             Socket socket;
             try {
-                socket = new Socket("localhost", 8000);
+                socket = new Socket(networkConfig.getHost(), Integer.parseInt(networkConfig.getPort()));
             } catch (Exception e) {
 
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -80,12 +93,13 @@ public class App extends Application {
 
             stage = (Stage) signBtn.getScene().getWindow();
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlConfig.getSignup())));
-
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
         } else if (event.getSource() == loginBtn) {
 
             Socket socket;
             try {
-                socket = new Socket("localhost", 8000);
+                socket = new Socket(networkConfig.getHost(), Integer.parseInt(networkConfig.getPort()));
             } catch (Exception e) {
 
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -100,13 +114,10 @@ public class App extends Application {
 
             stage = (Stage) loginBtn.getScene().getWindow();
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlConfig.getLogin())));
-        } else {
-            stage = (Stage) loginBtn.getScene().getWindow();
-            root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource(fxmlConfig.getLogin())));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
         }
 
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
 
     }
 

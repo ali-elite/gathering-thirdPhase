@@ -17,7 +17,7 @@ public class MessageListener implements EventListener {
     }
 
 
-    public void handle(MessageResponse messageResponse) {
+    public void handle(MessageResponse messageResponse) throws IOException {
 
         if (messageResponse.getOrder().equals("seen")) {
             messageController.seen(messageResponse);
@@ -29,6 +29,10 @@ public class MessageListener implements EventListener {
 
         if (messageResponse.getOrder().equals("delete")) {
             messageController.delete(messageResponse);
+        }
+
+        if (messageResponse.getOrder().equals("hyper")){
+            messageController.hyper(messageResponse);
         }
 
     }

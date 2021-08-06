@@ -66,11 +66,12 @@ public class Mainmenu {
     private static final ArrayList<Pane> chats = new ArrayList<>();
 
 
-
     private final MainMenuListener mainMenuListener = new MainMenuListener(this);
     private final UserSelectionListener userSelectionListener = new UserSelectionListener();
 
     private Notifications notifications = new Notifications();
+
+    private Timer timer = new Timer();;
 
 
     public Mainmenu() throws IOException {
@@ -122,33 +123,33 @@ public class Mainmenu {
             }
         };
 
-        Timer timer = new Timer();
-        timer.schedule(timerTask,1000,5000);
+
+        timer.schedule(timerTask, 1000, 5000);
 
     }
 
 
     public void timeLineUpdate(Event event) throws InterruptedException {
 
-            VBox vbox = new VBox();
+        VBox vbox = new VBox();
 
-            for (Pane p : timeThoughts) {
-                vbox.getChildren().add(p);
-            }
+        for (Pane p : timeThoughts) {
+            vbox.getChildren().add(p);
+        }
 
-            timeLineScroll.setContent(vbox);
+        timeLineScroll.setContent(vbox);
 
     }
 
     public void exploreUpdate(Event event) {
 
-            VBox vbox = new VBox();
+        VBox vbox = new VBox();
 
-            for (Pane p : exploreThoughts) {
-                vbox.getChildren().add(p);
-            }
+        for (Pane p : exploreThoughts) {
+            vbox.getChildren().add(p);
+        }
 
-            exploreScroll.setContent(vbox);
+        exploreScroll.setContent(vbox);
 
     }
 
@@ -171,13 +172,13 @@ public class Mainmenu {
 
     public void chatUpdate(Event event) throws InterruptedException {
 
-            VBox vbox = new VBox();
+        VBox vbox = new VBox();
 
-            for (Pane p : chats) {
-                vbox.getChildren().add(p);
-            }
+        for (Pane p : chats) {
+            vbox.getChildren().add(p);
+        }
 
-            chatScroll.setContent(vbox);
+        chatScroll.setContent(vbox);
     }
 
     public void settingUpdate(Event event) {
@@ -187,8 +188,6 @@ public class Mainmenu {
 
         diactive.setSelected(!StaticController.getMyUser().isActive());
     }
-
-
 
 
     public void makeThought(ActionEvent event) throws IOException {
@@ -335,13 +334,18 @@ public class Mainmenu {
 
     }
 
-    public void logOut(ActionEvent event) throws IOException {
+    public void logOut(ActionEvent event) throws IOException, InterruptedException {
+        timer.cancel();
         mainMenuListener.listen(new MainMenuEvent("logOut", StaticController.getMyUser().getId()));
     }
 
-    public void reload(){
+    public void reload() {
 
-        mainMenuListener.listen(new MainMenuEvent("loadUser",StaticController.getMyUser().getId()));
+        if(StaticController.getMyUser() == null){
+            return;
+        }
+
+        mainMenuListener.listen(new MainMenuEvent("loadUser", StaticController.getMyUser().getId()));
         mainMenuListener.listen(new MainMenuEvent("gatherThought", StaticController.getMyUser().getId()));
         mainMenuListener.listen(new MainMenuEvent("timeLineThought", StaticController.getMyUser().getId()));
         mainMenuListener.listen(new MainMenuEvent("exploreThought", StaticController.getMyUser().getId()));
@@ -351,4 +355,7 @@ public class Mainmenu {
 
     }
 
+    public Timer getTimer() {
+        return timer;
+    }
 }

@@ -21,9 +21,9 @@ public class ShareThoughtController {
     public void share(ShareThoughtResponse response) throws IOException {
 
         StaticController.setMyUser(response.getUser());
-//        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-//        alert.setContentText(errorConfig.getProfileChanged());
-//        alert.showAndWait();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText(errorConfig.getThoughtCreated());
+        alert.showAndWait();
         shareThoughtListener.getNewThought().back(null);
     }
 

@@ -4,6 +4,7 @@ import ir.sharif.ap2021.client.Config.ErrorConfig;
 import ir.sharif.ap2021.client.Config.ImageConfig;
 import ir.sharif.ap2021.client.Config.ItemConfig;
 import ir.sharif.ap2021.client.Controller.StaticController;
+import ir.sharif.ap2021.client.Listener.ChatListener;
 import ir.sharif.ap2021.client.Listener.MessageListener;
 import ir.sharif.ap2021.shared.Event.MessageEvent;
 import ir.sharif.ap2021.shared.Model.Message;
@@ -38,6 +39,7 @@ public class MessageView implements Initializable {
 
 
     MessageListener messageListener = new MessageListener(this);
+    ChatListener chatListener = new ChatListener();
 
     private Message message;
     private User sender;
@@ -45,19 +47,21 @@ public class MessageView implements Initializable {
     @FXML
     private Circle avatar;
     @FXML
-    private Label textLabel, forwardLabel, userLabel;
+    private Label textLabel, forwardLabel, userLabel, timeLabel;
     @FXML
     private Polygon triangle;
     @FXML
     private AnchorPane textPane;
     @FXML
-    private ImageView messageImg;
+    private ImageView messageImg, check1, check2, check3;
     @FXML
     private MenuBar menuBar;
     @FXML
     private Button editBtn;
     @FXML
     private TextArea editTextArea;
+    @FXML
+    private Hyperlink hypertext;
 
     public MessageView() throws IOException {
     }
@@ -79,12 +83,20 @@ public class MessageView implements Initializable {
         this.sender = sender;
     }
 
+    public ChatListener getChatListener() {
+        return chatListener;
+    }
+
+    public void setChatListener(ChatListener chatListener) {
+        this.chatListener = chatListener;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
         userLabel.setText(sender.getUserName());
         forwardLabel.setVisible(message.isForwarded());
+        timeLabel.setText(message.getTime().toString());
 
         if (message.isDeleted()) {
             textLabel.setText(itemConfig.getDeleteText());
@@ -95,7 +107,16 @@ public class MessageView implements Initializable {
             menuBar.setVisible(false);
             messageImg.setVisible(false);
         } else {
-            textLabel.setText(message.getText());
+
+            if (message.getText().startsWith("@")) {
+                hypertext.setText(message.getText());
+                textLabel.setVisible(false);
+
+            } else {
+                textLabel.setText(message.getText());
+                hypertext.setVisible(false);
+            }
+
             if (sender.getId() == StaticController.getMyUser().getId()) {
                 textPane.setStyle(itemConfig.getOwnStyle());
                 menuBar.setStyle(itemConfig.getOwnStyle());
@@ -149,6 +170,11 @@ public class MessageView implements Initializable {
 
         editBtn.setVisible(false);
         editTextArea.setVisible(false);
+
+        check1.setVisible(message.isCheck1());
+        check2.setVisible(message.isCheck2());
+        check3.setVisible(message.isCheck3());
+
     }
 
 
@@ -194,6 +220,13 @@ public class MessageView implements Initializable {
         textLabel.setText(editTextArea.getText());
         editTextArea.setVisible(false);
         editBtn.setVisible(false);
+
+    }
+
+    public void hyper(ActionEvent event) {
+
+        MessageEvent messageEvent = new MessageEvent("hyper", message);
+        messageListener.listen(messageEvent);
 
     }
 

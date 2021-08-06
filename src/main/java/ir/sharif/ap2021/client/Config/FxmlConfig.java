@@ -30,6 +30,7 @@ public class FxmlConfig {
     private String thought;
     private String timeline;
     private String userSelection;
+    private String outThought;
 
 
 
@@ -67,6 +68,7 @@ public class FxmlConfig {
         thought = properties.getProperty("thought");
         timeline = properties.getProperty("timeline");
         userSelection = properties.getProperty("userSelection");
+        outThought = properties.getProperty("outThought");
 
     }
 
@@ -161,5 +163,9 @@ public class FxmlConfig {
 
     public String getNewThought() {
         return newThought;
+    }
+
+    public String getOutThought() {
+        return outThought;
     }
 }
