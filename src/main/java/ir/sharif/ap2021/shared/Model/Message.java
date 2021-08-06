@@ -34,6 +34,10 @@ public class Message implements SaveAble {
     @JoinTable(name = "message_seen_users")
     private final List<User> seenUsers;
 
+    private boolean check1;
+    private boolean check2;
+    private boolean check3;
+
 
     public Message(User sender, boolean isForwarded, String text) {
 
@@ -43,6 +47,7 @@ public class Message implements SaveAble {
         time = LocalDateTime.now();
         isDeleted = false;
         seenUsers = new ArrayList<>();
+        check1 = true;
 
     }
 
@@ -50,6 +55,7 @@ public class Message implements SaveAble {
         time = LocalDateTime.now();
         isDeleted = false;
         seenUsers = new ArrayList<>();
+        check1 = true;
     }
 
     public int getId() {
@@ -110,6 +116,30 @@ public class Message implements SaveAble {
 
     public List<User> getSeenUsers() {
         return seenUsers;
+    }
+
+    public boolean isCheck1() {
+        return check1;
+    }
+
+    public void setCheck1(boolean check1) {
+        this.check1 = check1;
+    }
+
+    public boolean isCheck2() {
+        return check2;
+    }
+
+    public void setCheck2(boolean check2) {
+        this.check2 = check2;
+    }
+
+    public boolean isCheck3() {
+        return check3;
+    }
+
+    public void setCheck3(boolean check3) {
+        this.check3 = check3;
     }
 
     @Override

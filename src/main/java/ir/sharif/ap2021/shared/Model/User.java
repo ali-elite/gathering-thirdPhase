@@ -7,7 +7,6 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -298,7 +297,7 @@ public class User implements SaveAble {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return userName.equals(user.userName);
+        return id == (user.id);
     }
 
     @Override
@@ -317,7 +316,6 @@ public class User implements SaveAble {
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", password='" + password + '\'' +
-                ", avatar=" + Arrays.toString(avatar) +
                 ", LastSeenPrivacy='" + LastSeenPrivacy + '\'' +
                 ", id=" + id +
                 ", isActive=" + isActive +

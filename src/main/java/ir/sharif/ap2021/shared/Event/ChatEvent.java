@@ -2,6 +2,8 @@ package ir.sharif.ap2021.shared.Event;
 
 import ir.sharif.ap2021.shared.Model.Chat;
 
+import java.time.LocalDateTime;
+
 public class ChatEvent extends Event{
 
     private String order;
@@ -11,6 +13,7 @@ public class ChatEvent extends Event{
     private String someText;
     private Chat chat; // just for interClinet usage
     private byte[] image;
+    private LocalDateTime localDateTime;
 
     public ChatEvent(String order) {
         this.order = order;
@@ -70,6 +73,14 @@ public class ChatEvent extends Event{
 
     public void setImage(byte[] image) {
         this.image = image;
+    }
+
+    public LocalDateTime getLocalDateTime() {
+        return localDateTime;
+    }
+
+    public void setLocalDateTime(LocalDateTime localDateTime) {
+        this.localDateTime = localDateTime;
     }
 
     @Override
