@@ -22,16 +22,18 @@ public class Message implements SaveAble {
     private String text;
 
     @ManyToOne
-    @JoinTable(name = "message_sender")
+    @JoinTable(name = "message_sender", joinColumns = @JoinColumn(name = "message_sender"))
     private User sender;
 
+    @Lob
+    @Column(name = "image", columnDefinition = "MEDIUMBLOB")
     private byte[] image;
     private boolean isForwarded;
     private boolean isDeleted;
     private LocalDateTime time;
 
     @ManyToMany
-    @JoinTable(name = "message_seen_users")
+    @JoinTable(name = "message_seen_users", joinColumns = @JoinColumn(name = "message_seen_users"))
     private final List<User> seenUsers;
 
     private boolean check1;

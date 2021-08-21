@@ -23,11 +23,11 @@ public class Chat implements SaveAble {
     private String name;
 
     @ManyToMany
-    @JoinTable(name = "chat_users")
+    @JoinTable(name = "chat_users", joinColumns = @JoinColumn(name = "chat_users"))
     List<User> users = new ArrayList<>();
 
-    @OneToMany
-    @JoinTable(name = "chat_messages")
+    @ManyToMany
+    @JoinTable(name = "chat_messages", joinColumns = @JoinColumn(name = "chat_messages"))
     List<Message> messages = new ArrayList<>();
 
     public Chat(String name, boolean isGroup) {

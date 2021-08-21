@@ -15,5 +15,5 @@ public interface ResponseVisitor {
     void doNewGroup(NewGroupResponse response);
     void doThought(ThoughtResponse thoughtResponse);
     void doMessage(MessageResponse messageResponse);
-
+    void databaseFailed(DatabaseResponse databaseResponse);
 }

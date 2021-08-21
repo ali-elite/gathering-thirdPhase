@@ -16,11 +16,11 @@ public class Notification implements SaveAble {
     private int id;
 
     @ManyToOne
-    @JoinTable(name = "notification_sender")
+    @JoinTable(name = "notification_sender", joinColumns = @JoinColumn(name = "notification_sender"))
     private User sender;
 
     @ManyToOne
-    @JoinTable(name = "notification_receiver")
+    @JoinTable(name = "notification_receiver", joinColumns = @JoinColumn(name = "notification_receiver"))
     private User receiver;
 
     private boolean isAnswered;

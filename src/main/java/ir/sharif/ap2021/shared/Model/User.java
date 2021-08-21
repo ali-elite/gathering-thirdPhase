@@ -14,11 +14,10 @@ import java.util.Objects;
 @Table(name = "users_table")
 public class User implements SaveAble {
 
-    @Column
+    @Column(name = "firstname")
     private String firstName;
-    @Column
+    @Column(name = "lastname")
     private String lastName;
-
 
     private String userName;
 
@@ -27,6 +26,9 @@ public class User implements SaveAble {
     private String email;
     private String phoneNumber;
     private String password;
+
+    @Lob
+    @Column(name = "avatar", columnDefinition = "MEDIUMBLOB")
     private byte[] avatar;
     private String LastSeenPrivacy;
 
@@ -43,31 +45,31 @@ public class User implements SaveAble {
     private LocalDateTime lastSeen;
 
     @ElementCollection
-    @JoinTable(name = "user_thoughts")
+    @JoinTable(name = "user_thoughts", joinColumns = @JoinColumn(name = "user_thoughts"))
     private List<Integer> thoughts;
 
     @ElementCollection
-    @JoinTable(name = "user_followers")
+    @JoinTable(name = "user_followers", joinColumns = @JoinColumn(name = "user_followers"))
     private List<Integer> followers;
 
     @ElementCollection
-    @JoinTable(name = "user_followings")
+    @JoinTable(name = "user_followings", joinColumns = @JoinColumn(name = "user_followings"))
     private List<Integer> followings;
 
     @ElementCollection
-    @JoinTable(name = "user_blacklist")
+    @JoinTable(name = "user_blacklist", joinColumns = @JoinColumn(name = "user_blacklist"))
     private List<Integer> blackList;
 
     @ElementCollection
-    @JoinTable(name = "user_muteList")
+    @JoinTable(name = "user_muteList", joinColumns = @JoinColumn(name = "user_muteList"))
     private List<Integer> muteList;
 
     @ElementCollection
-    @JoinTable(name = "user_notifications")
+    @JoinTable(name = "user_notifications", joinColumns = @JoinColumn(name = "user_notifications"))
     private List<Integer> notifications;
 
     @ElementCollection
-    @JoinTable(name = "user_chats")
+    @JoinTable(name = "user_chats", joinColumns = @JoinColumn(name = "user_chats"))
     private List<Integer> chats;
 
 
@@ -105,7 +107,6 @@ public class User implements SaveAble {
         muteList = new ArrayList<>();
         chats = new ArrayList<>();
     }
-
 
 
     public String getFirstName() {

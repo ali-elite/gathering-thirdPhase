@@ -11,7 +11,7 @@ public class ChatEvent extends Event{
     private String pm;
     private String changed;
     private String someText;
-    private Chat chat; // just for interClinet usage
+    private Chat chat; // just for interClient usage
     private byte[] image;
     private LocalDateTime localDateTime;
 

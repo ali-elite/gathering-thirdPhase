@@ -30,26 +30,28 @@ public class Thought implements SaveAble {
     private int userId;
     private int parent;
     private String type;
+
+    @Lob
+    @Column(name = "image", columnDefinition = "MEDIUMBLOB")
     private byte[] image;
     private int likes;
     private int spamReports;
     private String text;
 
     @ElementCollection
-    @JoinTable(name = "thought_opinions")
+    @JoinTable(name = "thought_opinions", joinColumns = @JoinColumn(name = "thought_opinions"))
     private final List<Integer> opinions;
 
     @ManyToMany
-    @JoinTable(name = "thought_likers")
+    @JoinTable(name = "thought_likers", joinColumns = @JoinColumn(name = "thought_likers"))
     private final List<User> likers;
 
     @ManyToMany
-    @JoinTable(name = "thought_rethoughters")
+    @JoinTable(name = "thought_rethoughters",joinColumns = @JoinColumn(name = "thought_rethoughters"))
     private final List<User> rethoughters;
 
     private LocalDateTime localDateTime;
     private long rethought;
-
 
 
     public Thought(String type, User user, User doed, String text, LocalDateTime localDateTime) {
