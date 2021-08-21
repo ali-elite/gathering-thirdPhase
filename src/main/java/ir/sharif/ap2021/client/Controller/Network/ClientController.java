@@ -2,10 +2,10 @@ package ir.sharif.ap2021.client.Controller.Network;
 
 import ir.sharif.ap2021.client.Listener.*;
 import ir.sharif.ap2021.shared.Event.Event;
-import ir.sharif.ap2021.shared.Event.ExitEvent;
 import ir.sharif.ap2021.shared.Response.*;
 import ir.sharif.ap2021.shared.Util.Loop;
 import javafx.application.Platform;
+import javafx.scene.control.Alert;
 
 
 import java.io.IOException;
@@ -48,11 +48,9 @@ public class ClientController implements ResponseVisitor {
             events.clear();
         }
         for (Event event : temp) {
-//            connector.save(new RequestLog(request, username));
             Response[] responses = eventSender.sendEvent(event);
             for (Response response : responses) {
                 response.visit(this);
-//                connector.save(new ResponseLog(response, username));
             }
         }
     }
@@ -326,6 +324,23 @@ public class ClientController implements ResponseVisitor {
         }
 
 
+    }
+
+    @Override
+    public void databaseFailed(DatabaseResponse databaseResponse) {
+
+        Platform.runLater(() -> {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Sorry Out Server connection to database is down. App automatically will close in 3 seconds");
+            alert.showAndWait();
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.exit(0);
+
+        });
     }
 
 

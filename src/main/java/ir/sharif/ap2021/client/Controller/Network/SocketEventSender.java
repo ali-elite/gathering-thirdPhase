@@ -12,10 +12,6 @@ import ir.sharif.ap2021.shared.Util.Gson.*;
 import ir.sharif.ap2021.shared.Util.Letter;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-
-
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;

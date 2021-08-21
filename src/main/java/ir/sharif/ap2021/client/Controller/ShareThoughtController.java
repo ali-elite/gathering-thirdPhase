@@ -4,6 +4,7 @@ import ir.sharif.ap2021.client.Config.ErrorConfig;
 import ir.sharif.ap2021.client.Config.MainConfig;
 import ir.sharif.ap2021.client.Listener.ShareThoughtListener;
 import ir.sharif.ap2021.shared.Response.ShareThoughtResponse;
+import javafx.application.Platform;
 import javafx.scene.control.Alert;
 
 import java.io.IOException;
@@ -21,9 +22,12 @@ public class ShareThoughtController {
     public void share(ShareThoughtResponse response) throws IOException {
 
         StaticController.setMyUser(response.getUser());
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText(errorConfig.getThoughtCreated());
-        alert.showAndWait();
+        Platform.runLater(() -> {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText(errorConfig.getThoughtCreated());
+            alert.showAndWait();
+
+        });
         shareThoughtListener.getNewThought().back(null);
     }
 

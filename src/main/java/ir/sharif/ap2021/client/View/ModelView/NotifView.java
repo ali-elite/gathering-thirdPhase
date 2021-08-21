@@ -6,6 +6,7 @@ import ir.sharif.ap2021.client.Listener.NotifListener;
 import ir.sharif.ap2021.shared.Event.NotifEvent;
 import ir.sharif.ap2021.shared.Model.Notification;
 import ir.sharif.ap2021.shared.Model.User;
+import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -96,7 +97,9 @@ public class NotifView implements Initializable {
 
         }
 
-        textLabel.setText(notification.getText());
+        Platform.runLater(() -> {
+            textLabel.setText(notification.getText());
+        });
 
         if (user.getAvatar() == null) {
 

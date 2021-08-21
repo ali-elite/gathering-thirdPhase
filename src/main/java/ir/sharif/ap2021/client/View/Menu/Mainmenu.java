@@ -6,7 +6,6 @@ import ir.sharif.ap2021.client.Config.ItemConfig;
 
 import ir.sharif.ap2021.client.Controller.StaticController;
 import ir.sharif.ap2021.client.Listener.MainMenuListener;
-import ir.sharif.ap2021.client.Listener.NotifListener;
 import ir.sharif.ap2021.client.Listener.UserSelectionListener;
 import ir.sharif.ap2021.client.View.ModelView.Profile;
 import ir.sharif.ap2021.shared.Event.MainMenuEvent;
@@ -28,13 +27,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 
-public class Mainmenu {
+public class Mainmenu implements Initializable {
 
     ItemConfig itemConfig = new ItemConfig();
     ErrorConfig errorConfig = new ErrorConfig();
@@ -75,7 +71,6 @@ public class Mainmenu {
 
 
     public Mainmenu() throws IOException {
-
     }
 
 
@@ -328,6 +323,12 @@ public class Mainmenu {
         alert.showAndWait().ifPresent(response -> {
             if (response == ButtonType.OK) {
                 mainMenuListener.listen(new MainMenuEvent("delete", StaticController.getMyUser().getId()));
+                try {
+                    timer.cancel();
+                    mainMenuListener.mainMenuController.logOut(this);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -358,4 +359,14 @@ public class Mainmenu {
     public Timer getTimer() {
         return timer;
     }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+        privacy.setValue(StaticController.getMyUser().getLastSeenPrivacy());
+        diactive.setSelected(!StaticController.getMyUser().isActive());
+        privateCheck.setSelected(StaticController.getMyUser().isPrivate());
+
+    }
+
 }

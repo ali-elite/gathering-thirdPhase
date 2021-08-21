@@ -388,8 +388,7 @@ public class MainMenuController {
     }
 
     public void deleteUser(Mainmenu mainmenu) throws IOException {
-
-        logOut(null);
+//        logOut(null);
     }
 
     public void unblock(MainMenuResponse response) {

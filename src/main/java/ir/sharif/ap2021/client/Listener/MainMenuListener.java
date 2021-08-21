@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class MainMenuListener implements EventListener {
 
-    MainMenuController mainMenuController = new MainMenuController();
+    public MainMenuController mainMenuController = new MainMenuController();
     Mainmenu mainmenu;
 
     public MainMenuListener(Mainmenu mainmenu) throws IOException {
