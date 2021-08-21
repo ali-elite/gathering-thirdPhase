@@ -21,8 +21,6 @@ public class ClientHandler implements EventVisitor {
     private static final Logger logger = LogManager.getLogger(ClientHandler.class);
     private final List<Response> responseList;
     private final Connector connector;
-    //    private final ModelLoader modelLoader;
-    //    private final Collection collection;
     private final ResponseSender responseSender;
     private final ServerSocketManager serverSocketManager;
     private volatile boolean running;
@@ -30,15 +28,11 @@ public class ClientHandler implements EventVisitor {
 
     public ClientHandler(ResponseSender responseSender
             , Connector connector, ServerSocketManager serverSocketManager
-//                         ,ModelLoader modelLoader,
     ) {
         this.responseSender = responseSender;
         responseList = new ArrayList<>(100);
         this.connector = connector;
         this.serverSocketManager = serverSocketManager;
-//        this.modelLoader = modelLoader;
-//        collection = new Collection(connector, modelLoader);
-
     }
 
 
@@ -52,19 +46,10 @@ public class ClientHandler implements EventVisitor {
             Event event;
             try {
                 event = responseSender.getEvent();
-//                try {
-//                    connector.save(new RequestLog(event, (player == null) ? null : player.getUsername()));
                 event.visit(this);
-//                } catch (DatabaseDisconnectException e) {
-//                    responseSender.sendResponse(new GoTo("EXIT", "database disconnected"));
-//                    break;
-//                }
                 responseSender.sendResponse(responseList.toArray(new Response[0]));
                 responseList.clear();
             } catch (CliectDisconnectException e) {
-//                if (game != null) game.endGame(side);
-//                if (gameBuilder != null && gameBuilder instanceof OnlineGameBuilder)
-//                    ((OnlineGameBuilder) gameBuilder).cancel();
                 break;
             }
         }
@@ -75,14 +60,11 @@ public class ClientHandler implements EventVisitor {
         addToResponses(true, responses);
     }
 
-    private void addToResponses(boolean log, Response... responses)
-//            throws DatabaseDisconnectException
-    {
+    private void addToResponses(boolean log, Response... responses) {
         synchronized (responseList) {
             for (Response response : responses)
                 if (response != null) {
                     responseList.add(response);
-//                    if (log) connector.save(new ResponseLog(response, player.getUsername()));
                 }
         }
     }
@@ -102,7 +84,7 @@ public class ClientHandler implements EventVisitor {
     public void login(String username, String password) {
         try {
             List<User> fetched = connector.fetchUserWithUsername(username);
-            if (!fetched.isEmpty()) {
+            if (!fetched.isEmpty() && !fetched.get(0).isDeleted()) {
 
                 for (ClientHandler c : serverSocketManager.getClientHandlers()) {
                     if (c.user != null) {
@@ -130,6 +112,7 @@ public class ClientHandler implements EventVisitor {
             }
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
 
@@ -151,12 +134,28 @@ public class ClientHandler implements EventVisitor {
                 logger.info("User " + this.user.getId() + " with username " + username + "Signed up");
 
             } else {
-                Response response = new SignupResponse(false, "username already exists");
-                addToResponses(response);
+                if(checkDelete(user)){
+
+                    User newUser = new User(firstname, lastname, username, email, password);
+                    connector.save(newUser);
+                    User savedUser = connector.fetchUser(newUser);
+                    while (savedUser == null)
+                        savedUser = connector.fetchUser(newUser);
+                    this.user = savedUser;
+                    Response response = new SignupResponse(true, "Welcome " + username);
+                    addToResponses(response);
+                    logger.info("User " + this.user.getId() + " with username " + username + "Signed up");
+                }
+                else{
+                    Response response = new SignupResponse(false, "username already exists");
+                    addToResponses(response);
+
+                }
             }
 
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
 
@@ -171,6 +170,7 @@ public class ClientHandler implements EventVisitor {
             response = mainMenuController.answer();
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
         addToResponses(response);
@@ -189,6 +189,7 @@ public class ClientHandler implements EventVisitor {
             response = userSelectionController.answer();
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
         addToResponses(response);
@@ -211,6 +212,7 @@ public class ClientHandler implements EventVisitor {
             response = outProfileController.answer();
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
         addToResponses(response);
@@ -231,6 +233,7 @@ public class ClientHandler implements EventVisitor {
             response = notifController.answer();
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
         addToResponses(response);
@@ -247,6 +250,7 @@ public class ClientHandler implements EventVisitor {
             response = editProfileController.answer();
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
         addToResponses(response);
@@ -262,6 +266,7 @@ public class ClientHandler implements EventVisitor {
             response = shareThoughtController.answer();
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
         addToResponses(response);
@@ -276,6 +281,7 @@ public class ClientHandler implements EventVisitor {
             response = newGroupController.answer();
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
         addToResponses(response);
@@ -295,6 +301,7 @@ public class ClientHandler implements EventVisitor {
             response = thoughtController.answer();
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
         addToResponses(response);
@@ -310,6 +317,7 @@ public class ClientHandler implements EventVisitor {
             response = messageController.answer();
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
         addToResponses(response);
@@ -326,10 +334,20 @@ public class ClientHandler implements EventVisitor {
             response = chatController.answer();
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            addToResponses(new DatabaseResponse());
             e.printStackTrace();
         }
         addToResponses(response);
 
+    }
+
+    private boolean checkDelete(List<User> users) {
+        for (User user : users) {
+            if (!user.isDeleted()) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }

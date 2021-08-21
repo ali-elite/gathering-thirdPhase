@@ -21,7 +21,9 @@ public class ServerApp {
             logger.info("Server Started");
         } catch (DatabaseDisconnectException e) {
             logger.error("An error with Database: " + e.getMessage());
+            System.out.println("Server Could not connect to database so it is going to shutdown");
             e.printStackTrace();
+            System.exit(0);
         }
     }
 }

@@ -11,7 +11,6 @@ public class BotLoader {
     public void loadBot(String gameName
             ,String jarUrl
             ,String className
-//            ,GameLobby gameLobby
     ) throws
             MalformedURLException, ClassNotFoundException, NoSuchMethodException,
             InvocationTargetException, IllegalAccessException {
@@ -21,7 +20,5 @@ public class BotLoader {
         Class<?> target = loader.loadClass(className);
         Method method = target.getDeclaredMethod("getGenerator");
         method.setAccessible(true);
-//        OnlineGameBuilderGenerator generator = (OnlineGameBuilderGenerator) method.invoke(null);
-//        gameLobby.addGame(gameName,generator);
     }
 }

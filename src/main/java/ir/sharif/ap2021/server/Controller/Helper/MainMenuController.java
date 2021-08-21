@@ -4,10 +4,7 @@ import ir.sharif.ap2021.server.Controller.ClientHandler;
 import ir.sharif.ap2021.server.Hibernate.Connector;
 import ir.sharif.ap2021.server.Hibernate.DatabaseDisconnectException;
 import ir.sharif.ap2021.shared.Event.MainMenuEvent;
-import ir.sharif.ap2021.shared.Model.Chat;
-import ir.sharif.ap2021.shared.Model.Message;
-import ir.sharif.ap2021.shared.Model.Thought;
-import ir.sharif.ap2021.shared.Model.User;
+import ir.sharif.ap2021.shared.Model.*;
 import ir.sharif.ap2021.shared.Response.MainMenuResponse;
 import ir.sharif.ap2021.shared.Response.Response;
 
@@ -54,10 +51,10 @@ public class MainMenuController {
 
             // second checkmark checking
             List<Chat> chats = connector.fetchAll(Chat.class);
-            for(Chat c : chats){
-                if(c.getUsers().contains(user)){
-                    for(Message m : c.getMessages()){
-                        if(m.getSender() != user && !m.isCheck2()){
+            for (Chat c : chats) {
+                if (c.getUsers().contains(user)) {
+                    for (Message m : c.getMessages()) {
+                        if (m.getSender() != user && !m.isCheck2()) {
                             m.setCheck2(true);
                             connector.save(m);
                         }
@@ -117,8 +114,19 @@ public class MainMenuController {
             MainMenuResponse exploreResponse = new MainMenuResponse("exploreThought");
             List<Thought> thoughts = connector.fetchAll(Thought.class);
 
-            if (!thoughts.isEmpty())
-                exploreResponse.getThoughts().add(thoughts.get(0));
+            if (!thoughts.isEmpty()) {
+                int k = 0;
+                for (Thought t : thoughts) {
+                    if (!t.getUser().isPrivate()) {
+                        exploreResponse.getThoughts().add(t);
+                        k++;
+                        if (k == 5) {
+                            break;
+                        }
+                    }
+                }
+
+            }
 
             return exploreResponse;
         }
@@ -251,7 +259,27 @@ public class MainMenuController {
 
         if (order.equals("delete")) {
 
-            user.setPrivate(mainMenuEvent.isDiactive());
+            user.setDeleted(true);
+
+            for (Integer i : user.getChats()) {
+                connector.delete(connector.fetchById(Chat.class, i).get(0));
+            }
+            for (Integer i : user.getThoughts()) {
+                connector.delete(connector.fetchById(Thought.class, i).get(0));
+            }
+            for (Integer i : user.getNotifications()) {
+                connector.delete(connector.fetchById(Notification.class, i).get(0));
+            }
+            for (User u : connector.fetchAll(User.class)) {
+
+                u.getFollowers().remove((Integer) user.getId());
+                u.getFollowings().remove((Integer) user.getId());
+                u.getMuteList().remove((Integer) user.getId());
+                u.getBlackList().remove((Integer) user.getId());
+                connector.save(u);
+
+            }
+
             connector.delete(user);
 
             return new MainMenuResponse("delete");

@@ -1,3 +1,762 @@
 [INFO ] 2021-08-05 14:52:36.858 [main] ServerApp - Server Started
 [INFO ] 2021-08-06 17:40:58.877 [main] ServerApp - Server Started
 [INFO ] 2021-08-06 17:41:17.775 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-19 17:02:51.654 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:03:38.240 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-19 17:05:25.104 [Thread-5] ClientHandler - User 2 with username blogged in
+[INFO ] 2021-08-19 17:06:15.526 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:08:33.875 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:12:13.535 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:13:34.601 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:15:52.897 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:16:23.737 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-19 17:21:26.568 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:25:13.507 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:25:58.202 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-19 17:27:45.276 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:28:04.595 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-19 17:28:20.145 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-19 17:28:20.146 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-19 17:28:20.146 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-19 17:28:20.146 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-19 17:28:20.146 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-19 17:28:20.147 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-19 17:28:20.147 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-19 17:28:20.147 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-19 17:29:00.001 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:29:27.485 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-19 17:29:37.819 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-19 17:29:37.819 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-19 17:29:37.819 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-19 17:29:37.820 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-19 17:29:37.820 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-19 17:29:37.820 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-19 17:29:37.820 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-19 17:29:37.821 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-19 17:33:55.035 [main] ServerApp - Server Started
+[INFO ] 2021-08-19 17:34:38.175 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-19 17:34:48.342 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 15:18:52.013 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 15:19:57.361 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 15:20:20.821 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-20 15:20:20.822 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-20 15:20:20.822 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-20 15:20:20.822 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-20 15:20:20.822 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-20 15:20:20.823 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-20 15:20:20.823 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-20 15:20:20.823 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-20 15:20:44.508 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 15:21:07.284 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 15:22:12.314 [Thread-5] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 15:23:37.262 [Thread-6] ClientHandler - User 2 with username bSigned up
+[INFO ] 2021-08-20 15:26:02.624 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 15:26:14.430 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 15:26:33.042 [Thread-5] ClientHandler - User 2 with username blogged in
+[INFO ] 2021-08-20 15:28:12.359 [Thread-6] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 15:28:41.495 [Thread-7] ClientHandler - User 2 with username blogged in
+[INFO ] 2021-08-20 15:35:20.407 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 15:35:38.951 [Thread-4] ClientHandler - User 2 with username blogged in
+[INFO ] 2021-08-20 15:36:19.508 [Thread-5] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 15:44:24.127 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 15:45:02.535 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 15:45:28.108 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-20 15:45:28.108 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-20 15:45:28.108 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-20 15:45:28.108 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-20 15:45:28.109 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-20 15:45:28.109 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-20 15:45:28.109 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-20 15:45:28.109 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-20 15:45:53.824 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 15:46:18.560 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 15:46:44.826 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 15:46:59.989 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-20 15:46:59.989 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-20 15:46:59.989 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-20 15:46:59.990 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-20 15:46:59.990 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-20 15:46:59.990 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-20 15:46:59.990 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-20 15:46:59.990 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-20 15:47:32.493 [Thread-5] ClientHandler - User 2 with username bSigned up
+[ERROR] 2021-08-20 15:47:53.941 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:53.949 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:53.958 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:53.967 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:53.979 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:53.984 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:53.989 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:58.943 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:58.954 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:58.959 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:58.969 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:58.978 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:58.989 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:47:58.993 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:03.942 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:03.946 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:03.949 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:03.953 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:03.958 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:03.963 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:03.967 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:08.943 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:08.947 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:08.956 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:08.961 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:08.966 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:08.970 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:08.974 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:13.941 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:13.949 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:13.957 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:13.965 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:13.969 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:13.972 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:48:13.982 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[INFO ] 2021-08-20 15:48:58.699 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 15:49:01.824 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 15:49:38.695 [Thread-5] ClientHandler - User 2 with username blogged in
+[ERROR] 2021-08-20 15:50:02.836 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:02.838 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:02.841 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:02.843 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:02.846 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:02.849 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.006 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.009 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.015 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.019 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.022 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.025 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.038 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.905 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.907 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.910 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.919 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.922 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.927 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:04.933 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:07.404 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:07.409 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:07.414 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:07.418 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:07.423 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:07.425 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:07.434 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.104 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.109 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.112 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.117 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.121 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.137 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.155 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.904 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.907 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.912 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.923 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.940 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.957 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:09.962 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:12.405 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:12.407 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:12.410 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:12.413 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:12.417 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:12.422 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:12.430 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.105 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.108 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.120 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.124 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.129 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.134 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.141 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.905 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.908 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.910 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.912 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.915 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.918 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:14.922 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:17.405 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:17.407 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:17.410 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:17.415 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:17.419 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:17.421 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:17.429 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.111 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.113 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.116 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.118 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.124 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.140 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.144 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.904 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.906 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.908 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.909 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.951 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.953 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:19.955 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:22.404 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:22.407 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:22.411 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:22.415 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:22.419 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:22.423 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:22.445 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.104 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.106 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.113 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.121 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.123 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.126 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.129 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.904 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.908 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.913 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.919 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.927 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.934 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 15:50:24.937 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[INFO ] 2021-08-20 15:53:51.915 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 15:54:39.959 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 15:55:06.543 [Thread-5] ClientHandler - User 2 with username bSigned up
+[INFO ] 2021-08-20 15:59:09.714 [Thread-6] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 15:59:30.551 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 15:59:38.258 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 16:00:07.081 [Thread-5] ClientHandler - User 2 with username blogged in
+[INFO ] 2021-08-20 16:02:05.906 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 16:02:21.634 [Thread-4] ClientHandler - User 2 with username blogged in
+[ERROR] 2021-08-20 16:04:29.323 [Thread-1] Connector - An error with Delete in Database: Removing a detached instance ir.sharif.ap2021.shared.Model.User#2
+[ERROR] 2021-08-20 16:04:32.044 [Thread-4] ClientHandler - An error with Database: java.lang.IllegalArgumentException: Removing a detached instance ir.sharif.ap2021.shared.Model.User#2
+[ERROR] 2021-08-20 16:04:34.944 [Thread-4] ClientHandler - An error with Database: java.lang.IllegalArgumentException: Removing a detached instance ir.sharif.ap2021.shared.Model.User#2
+[ERROR] 2021-08-20 16:04:35.143 [Thread-4] ClientHandler - An error with Database: java.lang.IllegalArgumentException: Removing a detached instance ir.sharif.ap2021.shared.Model.User#2
+[ERROR] 2021-08-20 16:04:35.243 [Thread-4] ClientHandler - An error with Database: java.lang.IllegalArgumentException: Removing a detached instance ir.sharif.ap2021.shared.Model.User#2
+[ERROR] 2021-08-20 16:04:35.444 [Thread-4] ClientHandler - An error with Database: java.lang.IllegalArgumentException: Removing a detached instance ir.sharif.ap2021.shared.Model.User#2
+[INFO ] 2021-08-20 16:14:19.415 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 16:14:28.429 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 16:14:35.301 [Thread-4] ClientHandler - User 2 with username blogged in
+[ERROR] 2021-08-20 16:14:40.619 [Thread-1] Connector - An error with Delete in Database: Removing a detached instance ir.sharif.ap2021.shared.Model.User#2
+[INFO ] 2021-08-20 16:45:51.362 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 16:46:32.727 [Thread-4] ClientHandler - User 1 with username alogged in
+[ERROR] 2021-08-20 16:46:40.770 [Thread-1] Connector - An error with Delete in Database: Removing a detached instance ir.sharif.ap2021.shared.Model.User#1
+[INFO ] 2021-08-20 16:47:43.923 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 16:47:49.988 [Thread-4] ClientHandler - User 1 with username alogged in
+[ERROR] 2021-08-20 16:47:54.044 [Thread-1] Connector - An error with Delete in Database: Removing a detached instance ir.sharif.ap2021.shared.Model.User#1
+[INFO ] 2021-08-20 16:53:50.720 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 16:54:00.881 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 16:55:35.669 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 16:56:46.120 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:07:01.409 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:09:56.072 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:10:22.434 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 17:13:05.325 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:14:16.625 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:14:24.937 [Thread-4] ClientHandler - User 3 with username alogged in
+[ERROR] 2021-08-20 17:14:37.937 [Thread-1] Connector - An error with Delete in Database: Removing a detached instance ir.sharif.ap2021.shared.Model.User#3
+[ERROR] 2021-08-20 17:14:39.926 [Thread-4] ClientHandler - An error with Database: java.lang.IllegalArgumentException: Removing a detached instance ir.sharif.ap2021.shared.Model.User#3
+[ERROR] 2021-08-20 17:14:41.122 [Thread-4] ClientHandler - An error with Database: java.lang.IllegalArgumentException: Removing a detached instance ir.sharif.ap2021.shared.Model.User#3
+[INFO ] 2021-08-20 17:15:17.033 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:15:40.800 [Thread-4] ClientHandler - User 3 with username alogged in
+[INFO ] 2021-08-20 17:16:07.183 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 17:18:01.130 [Thread-6] ClientHandler - User 4 with username alogged in
+[INFO ] 2021-08-20 17:19:23.147 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:19:36.169 [Thread-4] ClientHandler - User 2 with username blogged in
+[INFO ] 2021-08-20 17:28:23.433 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:28:42.308 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 17:28:50.079 [Thread-5] ClientHandler - User 2 with username bSigned up
+[ERROR] 2021-08-20 17:29:49.469 [Thread-1] Connector - An error with commit in Database: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:49.510 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:49.515 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:49.517 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:49.527 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:49.530 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:49.534 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:49.538 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:51.514 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:51.520 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:51.526 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:51.546 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:51.552 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:51.559 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:51.569 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:52.412 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:52.414 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:52.416 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:52.418 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:52.423 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:52.427 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:52.431 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:53.807 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:53.809 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:53.812 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:53.814 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:53.819 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:53.821 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:53.832 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:54.508 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:54.509 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:54.512 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:54.514 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:54.516 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:54.518 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:54.520 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:56.511 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:56.514 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:56.516 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:56.519 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:56.521 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:56.523 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:56.525 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:57.212 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:57.412 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:57.414 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:57.416 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:57.419 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:57.422 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:57.425 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:57.428 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:58.808 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:58.809 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:58.816 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:58.817 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:58.821 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:58.839 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:58.841 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:59.506 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:59.508 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:59.511 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:59.513 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:59.519 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:59.525 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:29:59.527 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:01.513 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:01.516 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:01.518 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:01.520 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:01.529 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:01.532 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:01.535 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:02.413 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:02.415 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:02.417 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:02.419 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:02.420 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:02.422 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:02.425 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:03.806 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:03.808 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:03.809 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:03.810 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:03.811 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:03.812 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:03.813 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:04.507 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:04.509 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:04.511 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:04.512 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:04.514 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:04.515 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:04.519 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:06.511 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:06.513 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:06.515 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:06.516 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:06.519 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:06.521 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:06.523 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:07.414 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:07.416 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:07.418 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:07.426 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:07.428 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:07.431 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:07.433 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:08.808 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:08.811 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:08.814 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:08.816 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:08.818 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:08.819 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:08.822 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:09.508 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:09.510 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:09.512 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:09.515 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:09.516 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:09.518 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:09.519 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:11.512 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:11.514 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:11.517 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:11.522 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:11.532 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:11.534 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:11.536 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:12.412 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:12.414 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:12.416 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:12.417 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:12.418 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:12.420 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:12.424 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:13.808 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:13.809 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:13.811 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:13.812 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:13.814 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:13.815 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:13.818 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:14.507 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:14.509 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:14.510 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:14.512 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:14.513 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:14.517 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:14.522 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:16.513 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:16.515 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:16.516 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:16.518 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:16.519 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:16.521 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:16.524 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:17.412 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:17.415 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:17.416 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:17.421 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:17.427 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:17.430 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:17.435 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:18.809 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:18.810 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:18.812 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:18.814 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:18.815 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:18.818 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:18.820 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:19.510 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:19.513 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:19.520 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:19.522 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:19.525 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:19.527 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:19.529 [Thread-4] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:21.512 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:21.513 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:21.514 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:21.516 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:21.524 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:21.529 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[ERROR] 2021-08-20 17:30:21.533 [Thread-5] ClientHandler - An error with Database: javax.persistence.RollbackException: Error while committing the transaction
+[INFO ] 2021-08-20 17:36:03.809 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:47:44.452 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:48:08.871 [Thread-4] ClientHandler - User 1 with username aSigned up
+[ERROR] 2021-08-20 17:48:16.772 [Thread-1] Connector - An error with Delete in Database: Removing a detached instance ir.sharif.ap2021.shared.Model.User#1
+[INFO ] 2021-08-20 17:50:31.602 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:50:40.825 [Thread-4] ClientHandler - User 1 with username alogged in
+[ERROR] 2021-08-20 17:50:46.314 [Thread-1] Connector - An error with Delete in Database: Removing a detached instance ir.sharif.ap2021.shared.Model.User#1
+[INFO ] 2021-08-20 17:57:41.590 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:58:19.151 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 17:58:34.857 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-20 17:58:34.858 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-20 17:58:34.858 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-20 17:58:34.858 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-20 17:58:34.859 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-20 17:58:34.859 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-20 17:58:34.859 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-20 17:58:34.859 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[ERROR] 2021-08-20 17:58:35.021 [Thread-1] Connector - An error with commit in Database: Error while committing the transaction
+[INFO ] 2021-08-20 17:59:27.281 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 17:59:44.344 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 17:59:54.365 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-20 17:59:54.365 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-20 17:59:54.366 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-20 17:59:54.366 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-20 17:59:54.366 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-20 17:59:54.366 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-20 17:59:54.366 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-20 17:59:54.367 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-20 18:00:28.194 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 18:00:39.040 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 18:00:48.231 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-20 18:00:48.231 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-20 18:00:48.231 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-20 18:00:48.232 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-20 18:00:48.232 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-20 18:00:48.232 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-20 18:00:48.232 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-20 18:00:48.232 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-20 18:01:16.311 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 18:01:48.483 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 18:02:00.247 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-20 18:02:00.247 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-20 18:02:00.248 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-20 18:02:00.248 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-20 18:02:00.248 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-20 18:02:00.248 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-20 18:02:00.248 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-20 18:02:00.248 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-20 18:09:35.767 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 18:09:54.005 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 18:10:04.561 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-20 18:10:04.562 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-20 18:10:04.562 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-20 18:10:04.562 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-20 18:10:04.562 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-20 18:10:04.562 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-20 18:10:04.563 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-20 18:10:04.563 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-20 18:10:25.291 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 18:11:50.579 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 18:12:17.338 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 18:12:25.783 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-20 18:12:25.783 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-20 18:12:25.783 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-20 18:12:25.784 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-20 18:12:25.784 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-20 18:12:25.784 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-20 18:12:25.785 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-20 18:12:25.785 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-20 18:12:52.399 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 18:27:55.640 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 18:28:42.273 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstName, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastName, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from users_table as u1_0]
+[INFO ] 2021-08-20 18:29:46.378 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 18:29:54.287 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 18:29:58.734 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstName, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastName, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from users_table as u1_0]
+[INFO ] 2021-08-20 18:37:33.184 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 18:37:46.604 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstName, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastName, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from users_table as u1_0]
+[INFO ] 2021-08-20 19:19:30.145 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 19:19:53.078 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstName, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastName, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from users_table as u1_0]
+[INFO ] 2021-08-20 19:21:21.506 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 19:21:30.309 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstName, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastName, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from users_table as u1_0]
+[INFO ] 2021-08-20 19:23:50.066 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 19:23:59.008 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstName, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastName, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from User as u1_0]
+[INFO ] 2021-08-20 19:25:17.585 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 19:25:21.741 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstName, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastName, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from users_table as u1_0]
+[INFO ] 2021-08-20 19:26:13.728 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 19:26:23.904 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstName, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastName, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from User as u1_0]
+[INFO ] 2021-08-20 19:30:47.177 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 19:31:01.112 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstName, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastName, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from public.users_table as u1_0]
+[INFO ] 2021-08-20 19:40:18.252 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 19:40:39.539 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstName, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastName, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from public.users_table as u1_0]
+[INFO ] 2021-08-20 19:41:00.966 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 19:42:42.828 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 19:44:07.581 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 19:45:49.467 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 19:46:58.691 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 19:47:25.019 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 19:49:58.343 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 19:53:22.618 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 19:54:15.065 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:00:12.451 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:01:49.467 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:05:34.982 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:07:43.209 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:08:29.647 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:09:14.762 [main] ServerApp - Server Started
+[ERROR] 2021-08-20 20:11:03.204 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.SQLGrammarException` to JPA `PersistenceException` : JDBC exception executing SQL [select u1_0.id, u1_0.LastSeenPrivacy, u1_0.avatar, u1_0.biography, u1_0.birthday, u1_0.email, u1_0.firstname, u1_0.isActive, u1_0.isDeleted, u1_0.isPrivate, u1_0.lastname, u1_0.lastSeen, u1_0.password, u1_0.phoneNumber, u1_0.reportedTimes, u1_0.userName from users_table as u1_0]
+[INFO ] 2021-08-20 20:12:58.040 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:22:11.224 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:23:04.887 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:23:15.690 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 20:23:47.762 [Thread-4] ClientHandler - User 2 with username aSigned up
+[INFO ] 2021-08-20 20:26:02.517 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:31:54.814 [Thread-4] ClientHandler - User 3 with username aSigned up
+[INFO ] 2021-08-20 20:34:48.805 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:39:01.125 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:40:05.705 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:48:35.398 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 20:49:12.387 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 20:49:20.412 [Thread-4] EditProfileController - user 1 has changed his/her firstname to a
+[INFO ] 2021-08-20 20:49:20.412 [Thread-4] EditProfileController - user 1 has changed his/her lastname to a
+[INFO ] 2021-08-20 20:49:20.412 [Thread-4] EditProfileController - user 1 has changed his/her username to a
+[INFO ] 2021-08-20 20:49:20.413 [Thread-4] EditProfileController - user 1 has changed his/her phoneNumber to null
+[INFO ] 2021-08-20 20:49:20.413 [Thread-4] EditProfileController - user 1 has changed his/her email to a@a.com
+[INFO ] 2021-08-20 20:49:20.413 [Thread-4] EditProfileController - user 1 has changed his/her birthday to null
+[INFO ] 2021-08-20 20:49:20.413 [Thread-4] EditProfileController - user 1 has changed his/her biography to null
+[INFO ] 2021-08-20 20:49:20.413 [Thread-4] EditProfileController - user 1 has changed his/her avatar
+[INFO ] 2021-08-20 21:12:14.543 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:12:34.274 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 21:12:56.419 [Thread-5] ClientHandler - User 2 with username bSigned up
+[INFO ] 2021-08-20 21:14:31.814 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:14:40.736 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 21:14:50.425 [Thread-5] ClientHandler - User 2 with username blogged in
+[ERROR] 2021-08-20 21:15:29.927 [Thread-1] Connector - An error with commit in Database: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.928 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.936 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.941 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.947 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.956 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.963 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.975 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.980 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.985 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.991 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:29.996 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:30.001 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:30.010 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:30.015 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:30.020 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:30.024 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:30.032 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:30.038 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:30.045 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:30.051 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:30.057 [Thread-5] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:32.655 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:32.658 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:32.661 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:32.664 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:32.667 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:32.670 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:32.673 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:37.654 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:37.657 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:37.660 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:37.663 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:37.666 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:37.669 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[ERROR] 2021-08-20 21:15:37.696 [Thread-4] ClientHandler - An error with Database: javax.persistence.PersistenceException: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[INFO ] 2021-08-20 21:16:33.398 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:16:46.396 [Thread-4] ClientHandler - User 2 with username blogged in
+[INFO ] 2021-08-20 21:18:14.312 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:18:42.667 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 21:19:08.550 [Thread-5] ClientHandler - User 2 with username blogged in
+[INFO ] 2021-08-20 21:24:40.293 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:24:42.997 [Thread-4] ClientHandler - User 2 with username blogged in
+[INFO ] 2021-08-20 21:25:49.787 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:26:10.966 [Thread-4] ClientHandler - User 3 with username zSigned up
+[ERROR] 2021-08-20 21:26:55.418 [Thread-1] Connector - An error with commit in Database: Converting `org.hibernate.exception.ConstraintViolationException` to JPA `PersistenceException` : could not execute statement
+[INFO ] 2021-08-20 21:27:44.746 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:28:16.820 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:28:29.718 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 21:28:37.841 [Thread-5] ClientHandler - User 2 with username bSigned up
+[INFO ] 2021-08-20 21:31:20.218 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:31:54.507 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:32:27.885 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 21:32:47.329 [Thread-5] ClientHandler - User 2 with username bSigned up
+[ERROR] 2021-08-20 21:33:30.016 [Thread-1] Connector - An error with Save or Update in Database: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.016 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.017 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.019 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.020 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.023 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.025 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.026 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.029 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.031 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.032 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.035 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.037 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.040 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.041 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.043 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.046 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.047 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.048 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.049 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.049 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.050 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.052 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.053 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.053 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.054 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.055 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.056 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.057 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.058 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.059 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.060 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.061 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.062 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.063 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.064 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.065 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.065 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.066 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.067 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.067 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.068 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.069 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:30.070 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:32.263 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:32.264 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:32.265 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:32.265 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:32.266 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:32.267 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:32.268 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.163 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.164 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.165 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.166 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.168 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.169 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.170 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.261 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.263 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.264 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.265 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.265 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.266 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:34.268 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:37.262 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:37.263 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:37.264 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:37.264 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:37.265 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:37.265 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:37.266 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.162 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.163 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.164 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.165 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.165 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.166 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.167 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.261 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.262 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.263 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.263 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.264 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.265 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:39.266 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:42.362 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:42.363 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:42.363 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:42.364 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:42.365 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:42.365 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:42.366 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.161 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.162 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.164 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.165 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.166 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.167 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.168 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.261 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.262 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.263 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.264 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.265 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.265 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[ERROR] 2021-08-20 21:33:44.266 [Thread-4] ClientHandler - An error with Database: org.hibernate.NonUniqueObjectException: A different object with the same identifier value was already associated with the session : [ir.sharif.ap2021.shared.Model.User#2]
+[INFO ] 2021-08-20 21:35:37.962 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 21:35:53.493 [Thread-4] ClientHandler - User 2 with username blogged in
+[INFO ] 2021-08-20 21:36:18.252 [Thread-4] ClientHandler - User 1 with username alogged in
+[INFO ] 2021-08-20 22:25:28.123 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 22:29:08.726 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 22:30:13.882 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-20 22:47:41.622 [main] ServerApp - Server Started
+[INFO ] 2021-08-20 22:48:02.271 [Thread-4] ClientHandler - User 1 with username aSigned up
+[INFO ] 2021-08-21 18:40:23.586 [main] ServerApp - Server Started
+[INFO ] 2021-08-21 18:44:21.728 [main] ServerApp - Server Started
+[INFO ] 2021-08-21 18:45:19.997 [main] ServerApp - Server Started
+[INFO ] 2021-08-21 18:46:26.437 [main] ServerApp - Server Started
+[INFO ] 2021-08-21 18:47:45.276 [main] ServerApp - Server Started

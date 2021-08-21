@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="gatheringDB/Hibernate" uuid="c6de0fd0-f324-4e3d-8ca7-a159ce866c3c">
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="c6e95c26-debb-4e5a-ac4d-a3b06fdd2710">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>Hibernate
 
-D:/Sharif/Semester 4/Advanced Programming/Project/gathering - thirdPhase/gathering - server/src/main/resources/META-INF/persistence.xml</remarks>
+D:/Sharif/Semester 4/Advanced Programming/Project/gathering - thirdPhase/gathering - server/src/main/resources/hibernate.cfg.xml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/gatheringdb</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>

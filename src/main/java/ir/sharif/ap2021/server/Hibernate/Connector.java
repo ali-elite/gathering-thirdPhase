@@ -1,6 +1,5 @@
 package ir.sharif.ap2021.server.Hibernate;
 
-import ir.sharif.ap2021.server.Controller.ClientHandler;
 import ir.sharif.ap2021.shared.Model.Chat;
 import ir.sharif.ap2021.shared.Model.Notification;
 import ir.sharif.ap2021.shared.Model.Thought;
@@ -11,16 +10,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -31,27 +22,25 @@ public class Connector {
     private final static Object staticLock = new Object();
     private Throwable lastThrowable;
 
-
     private final SessionFactory sessionFactory;
     private final Set<SaveAble> save, delete;
     private final Object lock;
     private final Loop worker;
 
-    private static final Logger logger = LogManager.getLogger(Connector.class);
 
+    private static final Logger logger = LogManager.getLogger(Connector.class);
 
     public Connector() throws DatabaseDisconnectException {
 
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("gatheringDB");
-        EntityManager manager = entityManagerFactory.createEntityManager();
-        Session mySession = manager.unwrap(org.hibernate.Session.class);
-        sessionFactory = mySession.getSessionFactory();
+        Configuration config = new Configuration();
+        config.configure();
+        sessionFactory = config.buildSessionFactory();
+
         save = new HashSet<>();
         delete = new HashSet<>();
         lock = new Object();
         worker = new Loop(10, this::persist);
         worker.start();
-
     }
 
 
@@ -161,6 +150,12 @@ public class Connector {
         return executeHQL(hql, entity);
     }
 
+    public <E extends Serializable> List<E> fetchById(Class<E> entity, int id) throws DatabaseDisconnectException {
+        String hql = "from " + entity.getName() + " where id=" + id;
+        return executeHQL(hql, entity);
+    }
+
+
     public <E extends Serializable> List<E> executeHQL(String hql, Class<E> entity) throws DatabaseDisconnectException {
         synchronized (staticLock) {
             ensureOpen();
@@ -169,23 +164,6 @@ public class Connector {
             try {
                 result = session.createQuery(hql, entity).getResultList();
             } catch (Throwable e) {
-                lastThrowable = e;
-                e.printStackTrace();
-                throw new DatabaseDisconnectException(e);
-            }
-            session.close();
-            return result;
-        }
-    }
-
-    public <E extends Serializable> List<E> executeSQLQuery(String sql, Class<E> entity) throws DatabaseDisconnectException {
-        synchronized (staticLock) {
-            ensureOpen();
-            Session session = sessionFactory.openSession();
-            List<E> result;
-            try {
-                result = session.createNativeQuery(sql, entity).getResultList();
-            } catch (Exception e) {
                 lastThrowable = e;
                 e.printStackTrace();
                 throw new DatabaseDisconnectException(e);
@@ -214,7 +192,7 @@ public class Connector {
         List<User> selected = new ArrayList<>();
 
         for (User user : all) {
-            if (user.getUserName().equals(username)) {
+            if (user.getUserName().equals(username) && !user.isDeleted()) {
                 selected.add(user);
             }
         }
@@ -235,6 +213,7 @@ public class Connector {
         return selected;
 
     }
+
 
     public Thought fetchThought(Thought thought) throws DatabaseDisconnectException {
 

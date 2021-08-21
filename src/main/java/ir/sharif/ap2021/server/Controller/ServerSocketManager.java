@@ -19,7 +19,6 @@ public class ServerSocketManager {
 
     private final ServerSocket serverSocket;
     private final Connector connector;
-    //    private final ModelLoader modelLoader;
     private final List<ClientHandler> clientHandlers;
     private final NetworkConfig networkConfig;
     private volatile boolean running;
@@ -28,11 +27,9 @@ public class ServerSocketManager {
 
         networkConfig = new NetworkConfig();
         connector = new Connector();
-//        modelLoader = new ModelLoader(connector);
         serverSocket = new ServerSocket(Integer.parseInt(networkConfig.getPort()));
         running = true;
         clientHandlers = Collections.synchronizedList(new ArrayList<>());
-//        gameLoader = new GameLoader();
     }
 
     public List<ClientHandler> getClientHandlers() {
@@ -66,8 +63,8 @@ public class ServerSocketManager {
         Scanner scanner = new Scanner(System.in);
         while (running) {
             System.out.println(">>type commands");
-            System.out.println(">>type exit to shutdown server. make sure no client connected");
-            System.out.println(">>type add bot to add bot");
+            System.out.println(">>type exit to shutdown the server but first make sure that no client is connected");
+            System.out.println(">>type add bot to add awesome bots");
             switch (scanner.nextLine().strip()) {
                 case "exit" -> {
                     for (ClientHandler clientHandler : clientHandlers) {
@@ -92,7 +89,7 @@ public class ServerSocketManager {
                         String jarUrl = scanner.nextLine().strip();
                         System.out.println(">>enter main class name");
                         String className = scanner.nextLine().strip();
-//                        botLoader.loadBot(botName, jarUrl, className, gameLobby);
+//                        botLoader.loadBot(botName, jarUrl, className);
                         System.out.println(">>successfully added");
                     } catch (Throwable e) {
                         System.out.println(">>cant load bot");

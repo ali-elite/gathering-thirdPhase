@@ -1,6 +1,5 @@
 package ir.sharif.ap2021.server.Controller.Helper;
 
-import com.mysql.cj.xdevapi.Client;
 import ir.sharif.ap2021.server.Config.ErrorConfig;
 import ir.sharif.ap2021.server.Controller.ClientHandler;
 import ir.sharif.ap2021.server.Hibernate.Connector;
@@ -74,6 +73,7 @@ public class OutProfileController {
 
             User user = connector.fetch(User.class, clientHandler.user.getId());
             User follower = connector.fetch(User.class, event.getUserid());
+
             OutProfileResponse response = new OutProfileResponse("follow");
 
             if (user.getFollowings().contains(follower.getId())) {
@@ -129,7 +129,7 @@ public class OutProfileController {
 
                     Notification n = new Notification(true, user, follower, user.getUserName() + " " + errorConfig.getRequested());
                     connector.save(n);
-                    Notification savedN = null;
+                    Notification savedN = connector.fetchNotification(n);
                     while (savedN == null) {
                         savedN = connector.fetchNotification(n);
                     }
